@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol Model: Encodable {}
+public protocol Model: Codable,Equatable {}
 
 public extension Model {
     func toData()-> Data? {
