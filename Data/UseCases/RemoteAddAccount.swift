@@ -13,7 +13,7 @@ public final class RemoteAddAccount: AddAccount {
     private let url: URL
     private let httpClient: HttpPostClient
 
-   public init(url: URL, httpClient: HttpPostClient) {
+    public init(url: URL, httpClient: HttpPostClient) {
         self.url = url
         self.httpClient = httpClient
     }
@@ -25,8 +25,9 @@ public final class RemoteAddAccount: AddAccount {
             case .success(let data):
                 if let model: AccountModel = data.toModel() {
                     completion(.success(model))
+                }else{
+                    completion(.failure(.unexpected))
                 }
-
             case .failure(_):
                 completion(.failure(.unexpected))
             }
