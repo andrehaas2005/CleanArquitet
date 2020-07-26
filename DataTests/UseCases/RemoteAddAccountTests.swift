@@ -28,24 +28,24 @@ class RemoteAddAccountTests: XCTestCase {
 
     func test_post_httpClient_completion_error(){
         let (sut, httpClientSpy) = makeSut()
-        expect(sut, completeWith: .failure(.unexpected)) {
+        expect(sut, completeWith: .failure(.unexpected), when: {
         httpClientSpy.completeWithError(.noConnectivity)
-        }
+        })
     }
 
     func test_post_httpClient_completion_account(){
         let (sut, httpClientSpy) = makeSut()
         let account = makeAccountModel()
-        expect(sut, completeWith: .success(account)) {
+        expect(sut, completeWith: .success(account),when: {
             httpClientSpy.completeWithData(account.toData()!)
-        }
+        })
     }
 
     func test_post_httpClient_completion_account_invalid(){
         let (sut, httpClientSpy) = makeSut()
-        expect(sut, completeWith: .failure(.unexpected)) {
+        expect(sut, completeWith: .failure(.unexpected), when: {
             httpClientSpy.completeWithData(makeInvalidData())
-        }
+        })
     }
 
 }
@@ -58,16 +58,16 @@ extension RemoteAddAccountTests {
         return (sut, httpClientSpy)
     }
 
-    func expect(_ sut: RemoteAddAccount, completeWith expectedResult: Result<AccountModel, DomainError>, when action: ()->Void){
+    func expect(_ sut: RemoteAddAccount, completeWith expectedResult: Result<AccountModel, DomainError>, when action: ()->Void, file: StaticString = #file, line: UInt = #line){
 
         let exp = expectation(description: "wainting")
         sut.add(addAccountModel: makeAddAccountModel()) { receiveResult in
             switch (expectedResult, receiveResult) {
             case (.failure(let expectedError),.failure(let receiveError)):
-                 XCTAssertEqual(expectedError, receiveError)
+                XCTAssertEqual(expectedError, receiveError, file: file, line: line)
             case (.success(let expectedAccount),.success(let receiveAccount)):
-                XCTAssertEqual(expectedAccount, receiveAccount)
-            default: XCTFail("Expected \(expectedResult) received \(receiveResult) instead")
+                XCTAssertEqual(expectedAccount, receiveAccount, file: file, line: line)
+            default: XCTFail("Expected \(expectedResult) received \(receiveResult) instead", file: file, line: line)
 
             }
             exp.fulfill()
