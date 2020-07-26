@@ -95,9 +95,4 @@ extension RemoteAddAccountTests {
                                passwordConfirmation: "any123")
     }
 
-    func makeAccountModel() -> AccountModel {
-        return AccountModel(id: "any_id", name: "anyName",
-                            email: "any@any.com",
-                            password: "any123")
-    }
 }
