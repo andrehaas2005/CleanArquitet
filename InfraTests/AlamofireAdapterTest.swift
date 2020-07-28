@@ -8,6 +8,7 @@
 
 import XCTest
 import Alamofire
+import Data
 
 class AlamofireAdapter{
     private let session: Session
@@ -17,8 +18,7 @@ class AlamofireAdapter{
     }
 
     func post(to url: URL, with data: Data?){
-        let json = data == nil ? nil : try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? Parameters
-        session.request(url, method: .post, parameters: json, encoding: JSONEncoding.default).resume()
+        session.request(url, method: .post, parameters: data?.toJson(), encoding: JSONEncoding.default).resume()
     }
 }
 
@@ -27,36 +27,41 @@ class AlamofireAdapterTest: XCTestCase {
 
     func test_post_shold_make_request_with_valied_url_method() throws {
         let url = makeUrl()
-        let configiration = URLSessionConfiguration.default
-        configiration.protocolClasses = [UrlProtocolStub.self]
-        let session = Session(configuration: configiration)
-        let sut = AlamofireAdapter(session: session)
-        sut.post(to: url, with: makeValidData())
-        let exp = expectation(description: "wating")
-        UrlProtocolStub.observeRequest { (request) in
+        testResquestFor(url: makeUrl(), data: makeValidData()) { (request) in
             XCTAssertEqual(url, request.url)
             XCTAssertEqual("POST", request.httpMethod)
             XCTAssertNotNil(request.httpBodyStream)
-            exp.fulfill()
         }
-        wait(for: [exp], timeout: 1)
     }
 
     func test_post_shold_make_request_with_no_data() throws {
-        let url = makeUrl()
+        testResquestFor(data: nil) { (request) in
+            XCTAssertNil(request.httpBodyStream)
+        }
+    }
+}
+
+extension AlamofireAdapterTest {
+    func makeSut(file: StaticString = #file, line: UInt = #line) -> AlamofireAdapter {
         let configiration = URLSessionConfiguration.default
         configiration.protocolClasses = [UrlProtocolStub.self]
         let session = Session(configuration: configiration)
         let sut = AlamofireAdapter(session: session)
-        sut.post(to: url, with: nil)
+        checkMemoryLeak(for: sut,file: file, line: line)
+        return sut
+    }
+
+    func testResquestFor(url: URL = makeUrl(), data: Data?, action: @escaping (URLRequest) -> Void){
+        let sut = makeSut()
+        sut.post(to: url, with: data)
         let exp = expectation(description: "wating")
         UrlProtocolStub.observeRequest { (request) in
-            XCTAssertNil(request.httpBodyStream)
+            action(request)
             exp.fulfill()
         }
         wait(for: [exp], timeout: 1)
-    }
 
+    }
 }
 
 class UrlProtocolStub: URLProtocol {
