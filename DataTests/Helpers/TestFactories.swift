@@ -19,3 +19,7 @@ func makeInvalidData() -> Data {
 func makeValidData() -> Data {
     return Data("{\"name\":\"Andre\"}".utf8)
 }
+
+func makeError() -> Error {
+    return NSError(domain: "any_error", code: 400)
+}
