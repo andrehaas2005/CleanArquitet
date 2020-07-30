@@ -31,6 +31,7 @@ class AlamofireAdapterTest: XCTestCase {
 
     func test_post_shold_make_request_with_no_data_completion_error() throws {
         expectResult(.failure(.noConnectivity), when: (data: nil, response: nil, error: makeError()))
+         expectResult(.failure(HttpError.noConnectivity), when: (data: makeValidData(), response: makeHttpResponse(statusCode: 300), error: nil))
     }
 
     func test_post_shold_make_request_with_data_completion_data() throws {
@@ -57,6 +58,7 @@ class AlamofireAdapterTest: XCTestCase {
         expectResult(.failure(HttpError.badRequest), when: (data: makeValidData(), response: makeHttpResponse(statusCode: 400), error: nil))
         expectResult(.failure(HttpError.unauthorized), when: (data: makeValidData(), response: makeHttpResponse(statusCode: 401), error: nil))
         expectResult(.failure(HttpError.serverError), when: (data: makeValidData(), response: makeHttpResponse(statusCode: 500), error: nil))
+
     }
 }
 
