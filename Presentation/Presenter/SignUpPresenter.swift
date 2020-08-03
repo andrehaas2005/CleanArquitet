@@ -10,8 +10,10 @@ import Foundation
 
 public class SignUpPresenter {
     private let alertView: AlertView
-    public init(alertView: AlertView){
+    private let emailValidator: EmailValidator
+    public init(alertView: AlertView, emailValidator: EmailValidator){
         self.alertView = alertView
+        self.emailValidator = emailValidator
     }
     public func signUp(viewModel: SignUpViewModel){
         if let message = validation(viewModel: viewModel) {
@@ -29,7 +31,10 @@ public class SignUpPresenter {
             return "Campo senha é obrigatório."
         }else if viewModel.passwordConfirmation == nil || viewModel.passwordConfirmation!.isEmpty {
             return "Campo confirmar senha é obrigatório."
+        } else if viewModel.password != viewModel.passwordConfirmation {
+            return "Falha ao confirmar senhas"
         }
+        _ = emailValidator.isValid(email: viewModel.email!)
         return nil
     }
 }
