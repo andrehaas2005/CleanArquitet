@@ -24,8 +24,14 @@ public class SignUpPresenter {
                                                             message: message))
         } else {
             let addAccountModel = AddAccountModel(name: viewModel.name!, email: viewModel.email!, password: viewModel.password!, passwordConfirmation: viewModel.passwordConfirmation!)
-            addAccount.add(addAccountModel: addAccountModel) { (result) in
-                
+            addAccount.add(addAccountModel: addAccountModel) { result in
+                switch result {
+                case .success(_):
+                    break
+                case .failure:
+                    self.alertView.showMessage(viewModel: AlertViewModel(title: "Erro",
+                                                                    message: "Algo inesperado aconteceu, tente novamente mais tarde"))
+                }
             }
 
         }
@@ -34,11 +40,11 @@ public class SignUpPresenter {
     private func validation(viewModel: SignUpViewModel)-> String? {
         if viewModel.name == nil || viewModel.name!.isEmpty {
             return "Campo nome é obrigatório."
-        }else if viewModel.email == nil || viewModel.email!.isEmpty {
+        } else if viewModel.email == nil || viewModel.email!.isEmpty {
             return "Campo email é obrigatório."
-        }else if viewModel.password == nil || viewModel.password!.isEmpty {
+        } else if viewModel.password == nil || viewModel.password!.isEmpty {
             return "Campo senha é obrigatório."
-        }else if viewModel.passwordConfirmation == nil || viewModel.passwordConfirmation!.isEmpty {
+        } else if viewModel.passwordConfirmation == nil || viewModel.passwordConfirmation!.isEmpty {
             return "Campo confirmar senha é obrigatório."
         } else if viewModel.password != viewModel.passwordConfirmation {
             return "Campo confirmar senha é inválido."
