@@ -8,6 +8,7 @@
 
 import XCTest
 import Presentation
+import Domain
 
 class SignUpPresenterTests: XCTestCase {
 
@@ -64,12 +65,18 @@ class SignUpPresenterTests: XCTestCase {
         XCTAssertEqual(emailValidatorSpy.email, signUpViewModel.email)
     }
 
+    func test_signUp_should_call_addAccount_with_correct_value() throws {
+        let addAccountSpy = AddAccountSpy()
+        let sut = makeSut(addAccount: addAccountSpy)
+        sut.signUp(viewModel: makeSignUpViewModel())
+        XCTAssertEqual(addAccountSpy.addAccountModel, makeAddAccountModel())
+    }
 
 }
 
 extension SignUpPresenterTests {
-    func makeSut(alertView: AlertViewSpy  = AlertViewSpy(), emailValidatorSpy: EmailValidatorSpy = EmailValidatorSpy()) -> SignUpPresenter {
-        let sut = SignUpPresenter(alertView: alertView, emailValidator: emailValidatorSpy)
+    func makeSut(alertView: AlertViewSpy  = AlertViewSpy(), emailValidatorSpy: EmailValidatorSpy = EmailValidatorSpy(), addAccount: AddAccount = AddAccountSpy()) -> SignUpPresenter {
+        let sut = SignUpPresenter(alertView: alertView, emailValidator: emailValidatorSpy, addAccount: addAccount)
         return sut
     }
 
@@ -81,12 +88,13 @@ extension SignUpPresenterTests {
         return AlertViewModel(title: "Falha na validação", message: "Campo \(field) é inválido.")
     }
 
-    func makeSignUpViewModel(name: String? = "anny_name", email: String? = "any_email@mail.com", password: String? = "any_password", passwordConfirmation: String? = "any_password") -> SignUpViewModel {
+    func makeSignUpViewModel(name: String? = "anyName", email: String? = "any@any.com", password: String? = "any123", passwordConfirmation: String? = "any123") -> SignUpViewModel {
         return SignUpViewModel(name: name,
                                email: email,
                                password: password,
                                passwordConfirmation: passwordConfirmation)
     }
+
     class EmailValidatorSpy: EmailValidator {
         var isValid = true
         var email: String?
@@ -105,6 +113,15 @@ extension SignUpPresenterTests {
             self.viewModel = viewModel
 
         }
+    }
+
+    class AddAccountSpy: AddAccount {
+        var addAccountModel: AddAccountModel?
+        func add(addAccountModel: AddAccountModel, completion: @escaping (Result<AccountModel, DomainError>) -> Void) {
+            self.addAccountModel = addAccountModel
+        }
+
+
     }
 
 }
