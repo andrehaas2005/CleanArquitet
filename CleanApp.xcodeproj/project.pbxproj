@@ -32,6 +32,8 @@
 		D87DCD5B24CCC65200A8CCD1 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D87DCD3124CCBFA500A8CCD1 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D8C60BEC24D82F7D00C4326E /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C60BE324D82F7D00C4326E /* Presentation.framework */; };
 		D8C60BF124D82F7D00C4326E /* SignUpPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C60BF024D82F7D00C4326E /* SignUpPresenterTests.swift */; };
+		D8C60BFB24D85EE000C4326E /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C60BFA24D85EE000C4326E /* SignUpPresenter.swift */; };
+		D8C60C0024D8604B00C4326E /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C60BFF24D8604B00C4326E /* AlertView.swift */; };
 		D8CE7E0424D1E2ED00FC86A4 /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE7E0324D1E2ED00FC86A4 /* AlamofireAdapter.swift */; };
 		D8CE7E0824D2F9CC00FC86A4 /* UrlProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE7E0724D2F9CC00FC86A4 /* UrlProtocolStub.swift */; };
 		D8CE7E1024D3302200FC86A4 /* AddAccountIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE7E0F24D3302200FC86A4 /* AddAccountIntegrationTests.swift */; };
@@ -73,6 +75,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = D8C60BE224D82F7D00C4326E;
 			remoteInfo = Presentation;
+		};
+		D8C60BFC24D85F2900C4326E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D87DCD1824CCBE8600A8CCD1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D87DCD3024CCBFA500A8CCD1;
+			remoteInfo = Domain;
 		};
 		D8CE7E1324D3302200FC86A4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -152,6 +161,8 @@
 		D8C60BEB24D82F7D00C4326E /* PresentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C60BF024D82F7D00C4326E /* SignUpPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenterTests.swift; sourceTree = "<group>"; };
 		D8C60BF224D82F7D00C4326E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8C60BFA24D85EE000C4326E /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
+		D8C60BFF24D8604B00C4326E /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		D8CE7E0324D1E2ED00FC86A4 /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 		D8CE7E0724D2F9CC00FC86A4 /* UrlProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlProtocolStub.swift; sourceTree = "<group>"; };
 		D8CE7E0D24D3302200FC86A4 /* UseCasesIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UseCasesIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -394,6 +405,8 @@
 		D8C60BE424D82F7D00C4326E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				D8C60C0124D860AF00C4326E /* Presenter */,
+				D8C60BFE24D8602E00C4326E /* Views */,
 				D8C60BE624D82F7D00C4326E /* Info.plist */,
 			);
 			path = Presentation;
@@ -402,10 +415,34 @@
 		D8C60BEF24D82F7D00C4326E /* PresentationTests */ = {
 			isa = PBXGroup;
 			children = (
-				D8C60BF024D82F7D00C4326E /* SignUpPresenterTests.swift */,
+				D8C60C0424D8798500C4326E /* Presenter */,
 				D8C60BF224D82F7D00C4326E /* Info.plist */,
 			);
 			path = PresentationTests;
+			sourceTree = "<group>";
+		};
+		D8C60BFE24D8602E00C4326E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D8C60BFF24D8604B00C4326E /* AlertView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D8C60C0124D860AF00C4326E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D8C60BFA24D85EE000C4326E /* SignUpPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D8C60C0424D8798500C4326E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D8C60BF024D82F7D00C4326E /* SignUpPresenterTests.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		D8CE7E0524D2F90D00FC86A4 /* Http */ = {
@@ -577,6 +614,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D8C60BFD24D85F2900C4326E /* PBXTargetDependency */,
 			);
 			name = Presentation;
 			productName = Presentation;
@@ -651,6 +689,7 @@
 					};
 					D8C60BE224D82F7D00C4326E = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 					};
 					D8C60BEA24D82F7D00C4326E = {
 						CreatedOnToolsVersion = 11.6;
@@ -805,6 +844,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8C60BFB24D85EE000C4326E /* SignUpPresenter.swift in Sources */,
+				D8C60C0024D8604B00C4326E /* AlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -851,6 +892,11 @@
 			isa = PBXTargetDependency;
 			target = D8C60BE224D82F7D00C4326E /* Presentation */;
 			targetProxy = D8C60BED24D82F7D00C4326E /* PBXContainerItemProxy */;
+		};
+		D8C60BFD24D85F2900C4326E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D87DCD3024CCBFA500A8CCD1 /* Domain */;
+			targetProxy = D8C60BFC24D85F2900C4326E /* PBXContainerItemProxy */;
 		};
 		D8CE7E1424D3302200FC86A4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1242,6 +1288,7 @@
 		D8C60BF424D82F7D00C4326E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -1261,6 +1308,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -1268,6 +1316,7 @@
 		D8C60BF524D82F7D00C4326E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -1294,6 +1343,7 @@
 		D8C60BF624D82F7D00C4326E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8P4N6Y6C49;
@@ -1314,6 +1364,7 @@
 		D8C60BF724D82F7D00C4326E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8P4N6Y6C49;
