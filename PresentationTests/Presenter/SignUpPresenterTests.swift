@@ -111,11 +111,38 @@ class SignUpPresenterTests: XCTestCase {
         wait(for: [exp], timeout: 1.0)
     }
 
-    func test_signUp_should_show_loading_if_befoure_call_addAccount() throws {
+    func test_signUp_should_show_loading_befoure_call_addAccount() throws {
         let loadingViewSpy = LoadingViewSpy()
         let sut = makeSut(loadingView: loadingViewSpy)
+        let exp = expectation(description: "waiting")
+        loadingViewSpy.observe { (viewModel) in
+            XCTAssertEqual(viewModel, LoadingViewModel(isLoading: true))
+            exp.fulfill()
+        }
+
         sut.signUp(viewModel: makeSignUpViewModel())
-        XCTAssertEqual(loadingViewSpy.viewModel, LoadingViewModel(isLoading: true))
+        wait(for: [exp], timeout: 1)
+    }
+
+    func test_signUp_should_hiden_loading_befoure_call_addAccount() throws {
+        let loadingViewSpy = LoadingViewSpy()
+        let addAccountSpy = AddAccountSpy()
+        let sut = makeSut(addAccount: addAccountSpy, loadingView: loadingViewSpy)
+        let exp = expectation(description: "waiting")
+        loadingViewSpy.observe { (viewModel) in
+            XCTAssertEqual(viewModel, LoadingViewModel(isLoading: true))
+            exp.fulfill()
+        }
+
+        sut.signUp(viewModel: makeSignUpViewModel())
+        wait(for: [exp], timeout: 1)
+        let exp2 = expectation(description: "waiting")
+        loadingViewSpy.observe { (viewModel) in
+            XCTAssertEqual(viewModel, LoadingViewModel(isLoading: false))
+            exp2.fulfill()
+        }
+        addAccountSpy.completeWithError(.unexpected)
+        wait(for: [exp2], timeout: 1)
     }
 
     func test_signUp_should_call_emailValidator_with_correct_email() throws {
@@ -200,7 +227,12 @@ extension SignUpPresenterTests {
 }
 class LoadingViewSpy: LoadingView {
     var viewModel: LoadingViewModel?
+    var emit: ((LoadingViewModel)->Void)?
+
+    func observe(completion: @escaping (LoadingViewModel)->Void){
+        self.emit = completion
+    }
     func display(viewModel: LoadingViewModel) {
-        self.viewModel = viewModel
+        self.emit?(viewModel)
     }
 }
