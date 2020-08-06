@@ -14,6 +14,8 @@
 		D82960CA24DC40810070F88E /* LoadingViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82960C924DC40810070F88E /* LoadingViewSpy.swift */; };
 		D82960CD24DC41290070F88E /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82960CC24DC41290070F88E /* AddAccountSpy.swift */; };
 		D82960D024DC432D0070F88E /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82960CF24DC432D0070F88E /* TestFactories.swift */; };
+		D82960DF24DC470D0070F88E /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82960D624DC470D0070F88E /* UI.framework */; };
+		D82960E424DC470D0070F88E /* SignUpViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82960E324DC470D0070F88E /* SignUpViewControllerTests.swift */; };
 		D8768B7924CDB462009BAB47 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8768B7824CDB462009BAB47 /* Model.swift */; };
 		D8768B7B24CDB540009BAB47 /* RemoteAddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8768B7A24CDB540009BAB47 /* RemoteAddAccount.swift */; };
 		D8768B7D24CDB5BD009BAB47 /* HttpPostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8768B7C24CDB5BD009BAB47 /* HttpPostClient.swift */; };
@@ -52,6 +54,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D82960E024DC470D0070F88E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D87DCD1824CCBE8600A8CCD1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D82960D524DC470D0070F88E;
+			remoteInfo = UI;
+		};
 		D8768BA424CE45B2009BAB47 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D87DCD1824CCBE8600A8CCD1 /* Project object */;
@@ -150,6 +159,11 @@
 		D82960C924DC40810070F88E /* LoadingViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewSpy.swift; sourceTree = "<group>"; };
 		D82960CC24DC41290070F88E /* AddAccountSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountSpy.swift; sourceTree = "<group>"; };
 		D82960CF24DC432D0070F88E /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
+		D82960D624DC470D0070F88E /* UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D82960D924DC470D0070F88E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D82960DE24DC470D0070F88E /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D82960E324DC470D0070F88E /* SignUpViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewControllerTests.swift; sourceTree = "<group>"; };
+		D82960E524DC470D0070F88E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8768B7824CDB462009BAB47 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		D8768B7A24CDB540009BAB47 /* RemoteAddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccount.swift; sourceTree = "<group>"; };
 		D8768B7C24CDB5BD009BAB47 /* HttpPostClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpPostClient.swift; sourceTree = "<group>"; };
@@ -191,6 +205,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D82960D324DC470D0070F88E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D82960DB24DC470D0070F88E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D82960DF24DC470D0070F88E /* UI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D8768B9724CE45B2009BAB47 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -308,6 +337,23 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
+		D82960D724DC470D0070F88E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D82960D924DC470D0070F88E /* Info.plist */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D82960E224DC470D0070F88E /* UITests */ = {
+			isa = PBXGroup;
+			children = (
+				D82960E324DC470D0070F88E /* SignUpViewControllerTests.swift */,
+				D82960E524DC470D0070F88E /* Info.plist */,
+			);
+			path = UITests;
+			sourceTree = "<group>";
+		};
 		D8768B7E24CDC185009BAB47 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
@@ -413,6 +459,8 @@
 				D8CE7E0E24D3302200FC86A4 /* UseCasesIntegrationTests */,
 				D8C60BE424D82F7D00C4326E /* Presentation */,
 				D8C60BEF24D82F7D00C4326E /* PresentationTests */,
+				D82960D724DC470D0070F88E /* UI */,
+				D82960E224DC470D0070F88E /* UITests */,
 				D87DCD2224CCBE8600A8CCD1 /* Products */,
 				D87DCD5924CCC65200A8CCD1 /* Frameworks */,
 			);
@@ -429,6 +477,8 @@
 				D8CE7E0D24D3302200FC86A4 /* UseCasesIntegrationTests.xctest */,
 				D8C60BE324D82F7D00C4326E /* Presentation.framework */,
 				D8C60BEB24D82F7D00C4326E /* PresentationTests.xctest */,
+				D82960D624DC470D0070F88E /* UI.framework */,
+				D82960DE24DC470D0070F88E /* UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -559,6 +609,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		D82960D124DC470D0070F88E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D8768B9524CE45B2009BAB47 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -590,6 +647,42 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		D82960D524DC470D0070F88E /* UI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D82960E724DC470D0070F88E /* Build configuration list for PBXNativeTarget "UI" */;
+			buildPhases = (
+				D82960D124DC470D0070F88E /* Headers */,
+				D82960D224DC470D0070F88E /* Sources */,
+				D82960D324DC470D0070F88E /* Frameworks */,
+				D82960D424DC470D0070F88E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UI;
+			productName = UI;
+			productReference = D82960D624DC470D0070F88E /* UI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D82960DD24DC470D0070F88E /* UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D82960EA24DC470D0070F88E /* Build configuration list for PBXNativeTarget "UITests" */;
+			buildPhases = (
+				D82960DA24DC470D0070F88E /* Sources */,
+				D82960DB24DC470D0070F88E /* Frameworks */,
+				D82960DC24DC470D0070F88E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D82960E124DC470D0070F88E /* PBXTargetDependency */,
+			);
+			name = UITests;
+			productName = UITests;
+			productReference = D82960DE24DC470D0070F88E /* UITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		D8768B9924CE45B2009BAB47 /* Infra */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8768BAB24CE45B2009BAB47 /* Build configuration list for PBXNativeTarget "Infra" */;
@@ -754,6 +847,12 @@
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = "André Haas";
 				TargetAttributes = {
+					D82960D524DC470D0070F88E = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					D82960DD24DC470D0070F88E = {
+						CreatedOnToolsVersion = 11.6;
+					};
 					D8768B9924CE45B2009BAB47 = {
 						CreatedOnToolsVersion = 11.6;
 						LastSwiftMigration = 1160;
@@ -808,11 +907,27 @@
 				D8CE7E0C24D3302200FC86A4 /* UseCasesIntegrationTests */,
 				D8C60BE224D82F7D00C4326E /* Presentation */,
 				D8C60BEA24D82F7D00C4326E /* PresentationTests */,
+				D82960D524DC470D0070F88E /* UI */,
+				D82960DD24DC470D0070F88E /* UITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D82960D424DC470D0070F88E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D82960DC24DC470D0070F88E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D8768B9824CE45B2009BAB47 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -872,6 +987,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D82960D224DC470D0070F88E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D82960DA24DC470D0070F88E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D82960E424DC470D0070F88E /* SignUpViewControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D8768B9624CE45B2009BAB47 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -964,6 +1094,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D82960E124DC470D0070F88E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D82960D524DC470D0070F88E /* UI */;
+			targetProxy = D82960E024DC470D0070F88E /* PBXContainerItemProxy */;
+		};
 		D8768BA524CE45B2009BAB47 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D8768B9924CE45B2009BAB47 /* Infra */;
@@ -1012,6 +1147,98 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		D82960E824DC470D0070F88E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8P4N6Y6C49;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = br.nom.andre.haas.UI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D82960E924DC470D0070F88E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8P4N6Y6C49;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = br.nom.andre.haas.UI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		D82960EB24DC470D0070F88E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8P4N6Y6C49;
+				INFOPLIST_FILE = UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = br.nom.andre.haas.UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D82960EC24DC470D0070F88E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8P4N6Y6C49;
+				INFOPLIST_FILE = UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = br.nom.andre.haas.UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		D8768BAC24CE45B2009BAB47 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1521,6 +1748,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D82960E724DC470D0070F88E /* Build configuration list for PBXNativeTarget "UI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D82960E824DC470D0070F88E /* Debug */,
+				D82960E924DC470D0070F88E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D82960EA24DC470D0070F88E /* Build configuration list for PBXNativeTarget "UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D82960EB24DC470D0070F88E /* Debug */,
+				D82960EC24DC470D0070F88E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D8768BAB24CE45B2009BAB47 /* Build configuration list for PBXNativeTarget "Infra" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
