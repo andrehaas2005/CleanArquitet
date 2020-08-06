@@ -18,8 +18,8 @@ class SignUpPresenterTests: XCTestCase {
         let sut = makeSut(alertView: alertViewSpy)
         let exp = expectation(description: "waiting")
         alertViewSpy.observe { [weak self] (viewModel) in
-            guard let self = self else { return }
-            XCTAssertEqual(viewModel, self.makeRequeredAlertViewModel(field: "nome"))
+            guard  self != nil else { return }
+            XCTAssertEqual(viewModel, makeRequeredAlertViewModel(field: "nome"))
             exp.fulfill()
         }
         sut.signUp(viewModel: makeSignUpViewModel(name: nil))
@@ -31,8 +31,8 @@ class SignUpPresenterTests: XCTestCase {
         let sut = makeSut(alertView: alertViewSpy)
         let exp = expectation(description: "waiting")
         alertViewSpy.observe { [weak self] (viewModel) in
-            guard let self = self else { return }
-            XCTAssertEqual(viewModel, self.makeRequeredAlertViewModel(field: "email"))
+            guard  self != nil else { return }
+            XCTAssertEqual(viewModel, makeRequeredAlertViewModel(field: "email"))
             exp.fulfill()
         }
         sut.signUp(viewModel: makeSignUpViewModel(email: nil))
@@ -44,8 +44,8 @@ class SignUpPresenterTests: XCTestCase {
         let sut = makeSut(alertView: alertViewSpy)
         let exp = expectation(description: "waiting")
         alertViewSpy.observe { [weak self] (viewModel) in
-            guard let self = self else { return }
-            XCTAssertEqual(viewModel, self.makeRequeredAlertViewModel(field: "senha"))
+            guard  self != nil else { return }
+            XCTAssertEqual(viewModel, makeRequeredAlertViewModel(field: "senha"))
             exp.fulfill()
         }
         sut.signUp(viewModel: makeSignUpViewModel(password: nil))
@@ -57,8 +57,8 @@ class SignUpPresenterTests: XCTestCase {
         let sut = makeSut(alertView: alertViewSpy)
         let exp = expectation(description: "waiting")
         alertViewSpy.observe { [weak self] (viewModel) in
-            guard let self = self else { return }
-            XCTAssertEqual(viewModel, self.makeRequeredAlertViewModel(field: "confirmar senha"))
+            guard  self != nil else { return }
+            XCTAssertEqual(viewModel, makeRequeredAlertViewModel(field: "confirmar senha"))
             exp.fulfill()
         }
         sut.signUp(viewModel: makeSignUpViewModel(passwordConfirmation: nil))
@@ -70,8 +70,8 @@ class SignUpPresenterTests: XCTestCase {
         let sut = makeSut(alertView: alertViewSpy)
         let exp = expectation(description: "waiting")
         alertViewSpy.observe { [weak self] (viewModel) in
-            guard let self = self else { return }
-            XCTAssertEqual(viewModel, self.makeInvalidAlertViewModel(field: "confirmar senha"))
+            guard  self != nil else { return }
+            XCTAssertEqual(viewModel, makeInvalidAlertViewModel(field: "confirmar senha"))
             exp.fulfill()
         }
         sut.signUp(viewModel: makeSignUpViewModel(passwordConfirmation: "wrong_password"))
@@ -85,8 +85,8 @@ class SignUpPresenterTests: XCTestCase {
         let exp = expectation(description: "waiting")
         let signUpViewModel = makeSignUpViewModel()
         alertViewSpy.observe { [weak self] (viewModel) in
-            guard let self = self else { return }
-            XCTAssertEqual(viewModel, self.makeInvalidAlertViewModel(field: "email"))
+            guard  self != nil else { return }
+            XCTAssertEqual(viewModel, makeInvalidAlertViewModel(field: "email"))
             exp.fulfill()
         }
 
@@ -102,8 +102,8 @@ class SignUpPresenterTests: XCTestCase {
         let signUpViewModel = makeSignUpViewModel()
         let exp = expectation(description: "waiting")
         alertViewSpy.observe { [weak self] (viewModel) in
-            guard let self = self else { return }
-            XCTAssertEqual(viewModel, self.makeErrorAlertViewModel(message: "Algo inesperado aconteceu, tente novamente mais tarde"))
+            guard  self != nil else { return }
+            XCTAssertEqual(viewModel, makeErrorAlertViewModel(message: "Algo inesperado aconteceu, tente novamente mais tarde"))
             exp.fulfill()
         }
         sut.signUp(viewModel: signUpViewModel)
@@ -152,8 +152,8 @@ class SignUpPresenterTests: XCTestCase {
         let signUpViewModel = makeSignUpViewModel()
         let exp = expectation(description: "waiting")
         alertViewSpy.observe { [weak self] (viewModel) in
-            guard let self = self else { return }
-            XCTAssertEqual(viewModel, self.makeSuccessAlertViewModel(message: "Conta criada com sucesso."))
+            guard  self != nil else { return }
+            XCTAssertEqual(viewModel, makeSuccessAlertViewModel(message: "Conta criada com sucesso."))
             exp.fulfill()
         }
         sut.signUp(viewModel: signUpViewModel)
@@ -185,79 +185,4 @@ extension SignUpPresenterTests {
         return sut
     }
 
-    func makeRequeredAlertViewModel(field: String) -> AlertViewModel {
-        return AlertViewModel(title: "Falha na validação", message: "Campo \(field) é obrigatório.")
-    }
-
-    func makeInvalidAlertViewModel(field: String) -> AlertViewModel {
-        return AlertViewModel(title: "Falha na validação", message: "Campo \(field) é inválido.")
-    }
-
-    func makeErrorAlertViewModel(message: String) -> AlertViewModel {
-        return AlertViewModel(title: "Erro", message: message)
-    }
-
-    func makeSuccessAlertViewModel(message: String) -> AlertViewModel {
-        return AlertViewModel(title: "Sucesso", message: message)
-    }
-
-    func makeSignUpViewModel(name: String? = "anyName", email: String? = "any@any.com", password: String? = "any123", passwordConfirmation: String? = "any123") -> SignUpViewModel {
-        return SignUpViewModel(name: name,
-                               email: email,
-                               password: password,
-                               passwordConfirmation: passwordConfirmation)
-    }
-
-    class EmailValidatorSpy: EmailValidator {
-        var isValid = true
-        var email: String?
-        func isValid(email: String) -> Bool {
-            self.email = email
-            return isValid
-        }
-
-        func simulateInvalidEmail() {
-            self.isValid = false
-        }
-    }
-    class AlertViewSpy: AlertView {
-        var viewModel: AlertViewModel?
-        var emit: ((AlertViewModel)->Void)?
-
-        func observe(completion: @escaping (AlertViewModel)->Void){
-            self.emit = completion
-        }
-        func showMessage(viewModel: AlertViewModel) {
-            emit?(viewModel)
-        }
-    }
-
-    class AddAccountSpy: AddAccount {
-        var addAccountModel: AddAccountModel?
-        var completion: ((Result<AccountModel, DomainError>)-> Void)?
-        func add(addAccountModel: AddAccountModel, completion: @escaping (Result<AccountModel, DomainError>) -> Void) {
-            self.addAccountModel = addAccountModel
-            self.completion = completion
-        }
-
-        func completeWithError(_ error: DomainError){
-            completion?(.failure(error))
-        }
-
-        func completeWithAccount(_ account: AccountModel){
-            completion?(.success(account))
-        }
-
-    }
-}
-class LoadingViewSpy: LoadingView {
-    var viewModel: LoadingViewModel?
-    var emit: ((LoadingViewModel)->Void)?
-
-    func observe(completion: @escaping (LoadingViewModel)->Void){
-        self.emit = completion
-    }
-    func display(viewModel: LoadingViewModel) {
-        self.emit?(viewModel)
-    }
 }
