@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="crj-G8-16V">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign Up View Controller-->
+        <scene sceneID="Uad-tp-KQf">
+            <objects>
+                <viewController storyboardIdentifier="SignUpViewController" id="crj-G8-16V" customClass="SignUpViewController" customModule="UI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lfK-nH-JA2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="qg4-hz-se0">
+                                <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qg4-hz-se0" firstAttribute="centerX" secondItem="E2w-JR-3mZ" secondAttribute="centerX" id="UiD-ul-IHh"/>
+                            <constraint firstItem="qg4-hz-se0" firstAttribute="width" secondItem="lfK-nH-JA2" secondAttribute="width" multiplier="0.089372" id="VoI-JV-EzU"/>
+                            <constraint firstItem="qg4-hz-se0" firstAttribute="height" secondItem="lfK-nH-JA2" secondAttribute="height" multiplier="0.0412946" id="hfh-RC-G4Y"/>
+                            <constraint firstItem="qg4-hz-se0" firstAttribute="centerY" secondItem="E2w-JR-3mZ" secondAttribute="centerY" id="n8v-0o-QWK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="E2w-JR-3mZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="loadingIndicator" destination="qg4-hz-se0" id="k5l-6X-Wps"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jCx-Cy-PMV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141" y="72"/>
+        </scene>
+    </scenes>
+</document>
