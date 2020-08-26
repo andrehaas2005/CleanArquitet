@@ -23,6 +23,30 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="io9-Wm-jAw">
+                                <rect key="frame" x="159" y="174" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3nl-zS-Zyi">
+                                <rect key="frame" x="159" y="233" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Blp-7M-QJ6">
+                                <rect key="frame" x="159" y="291" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mcl-vD-1NR">
+                                <rect key="frame" x="159" y="350" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -34,7 +58,11 @@
                         <viewLayoutGuide key="safeArea" id="E2w-JR-3mZ"/>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="3nl-zS-Zyi" id="NPR-Bq-crL"/>
                         <outlet property="loadingIndicator" destination="qg4-hz-se0" id="k5l-6X-Wps"/>
+                        <outlet property="nameTextField" destination="io9-Wm-jAw" id="fsV-WR-jNk"/>
+                        <outlet property="passwordConfirmationTextField" destination="mcl-vD-1NR" id="nRp-9p-y6x"/>
+                        <outlet property="passwordTextField" destination="Blp-7M-QJ6" id="WkG-vh-e9e"/>
                         <outlet property="saveButton" destination="8I3-pU-mlR" id="lUQ-wP-0Gu"/>
                     </connections>
                 </viewController>
