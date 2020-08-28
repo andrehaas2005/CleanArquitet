@@ -55,6 +55,7 @@
 		D8CE7E0824D2F9CC00FC86A4 /* UrlProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE7E0724D2F9CC00FC86A4 /* UrlProtocolStub.swift */; };
 		D8CE7E1024D3302200FC86A4 /* AddAccountIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE7E0F24D3302200FC86A4 /* AddAccountIntegrationTests.swift */; };
 		D8CE7E1224D3302200FC86A4 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D87DCD4224CCC5BC00A8CCD1 /* Data.framework */; };
+		D8DD6AB024F96173003DC1C7 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD6AAF24F96173003DC1C7 /* TestExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -226,6 +227,7 @@
 		D8CE7E0D24D3302200FC86A4 /* UseCasesIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UseCasesIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8CE7E0F24D3302200FC86A4 /* AddAccountIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountIntegrationTests.swift; sourceTree = "<group>"; };
 		D8CE7E1124D3302200FC86A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8DD6AAF24F96173003DC1C7 /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -374,6 +376,7 @@
 		D82960E224DC470D0070F88E /* UITests */ = {
 			isa = PBXGroup;
 			children = (
+				D8DD6AAE24F96147003DC1C7 /* Helpers */,
 				D8DD6AAD24F95FEB003DC1C7 /* Scenes */,
 				D82960E524DC470D0070F88E /* Info.plist */,
 			);
@@ -663,6 +666,14 @@
 				D8DD6AAB24F95F89003DC1C7 /* SignUp */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D8DD6AAE24F96147003DC1C7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D8DD6AAF24F96173003DC1C7 /* TestExtensions.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1063,6 +1074,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D82960E424DC470D0070F88E /* SignUpViewControllerTests.swift in Sources */,
+				D8DD6AB024F96173003DC1C7 /* TestExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
