@@ -43,8 +43,8 @@ class SignUpViewControllerTests: XCTestCase {
 
 extension SignUpViewControllerTests {
     func makeSuv(signUpSpy: ((SignUpViewModel)->Void)? = nil) -> SignUpViewController {
-        let sb = UIStoryboard(name: "SignUp", bundle: Bundle(for: SignUpViewController.self))
-        let suv = sb.instantiateViewController(identifier: "SignUpViewController") as! SignUpViewController
+
+        let suv = SignUpViewController.instantiate()
         suv.signUp = signUpSpy
         suv.loadViewIfNeeded()
         return suv

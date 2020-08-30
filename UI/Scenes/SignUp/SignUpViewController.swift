@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Presentation
 
-final class SignUpViewController: UIViewController {
+final class SignUpViewController: UIViewController, Storyboarded {
 
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var saveButton: UIButton!
@@ -29,6 +29,10 @@ final class SignUpViewController: UIViewController {
     private func configure(){
         saveButton?.layer.cornerRadius = 5
         saveButton?.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
 
     @objc private func saveButtonTapped() {
