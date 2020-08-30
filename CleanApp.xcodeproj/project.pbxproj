@@ -66,6 +66,19 @@
 		D8DD6AE124FC5FC6003DC1C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD6AE024FC5FC6003DC1C7 /* SceneDelegate.swift */; };
 		D8DD6AE824FC5FC9003DC1C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8DD6AE724FC5FC9003DC1C7 /* Assets.xcassets */; };
 		D8DD6AEB24FC5FC9003DC1C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8DD6AE924FC5FC9003DC1C7 /* LaunchScreen.storyboard */; };
+		D8DD6AFE24FC60D9003DC1C7 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D87DCD4224CCC5BC00A8CCD1 /* Data.framework */; };
+		D8DD6AFF24FC60D9003DC1C7 /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D87DCD4224CCC5BC00A8CCD1 /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D8DD6B0224FC60D9003DC1C7 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D87DCD3124CCBFA500A8CCD1 /* Domain.framework */; };
+		D8DD6B0324FC60D9003DC1C7 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D87DCD3124CCBFA500A8CCD1 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D8DD6B0624FC60D9003DC1C7 /* Infra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8768B9A24CE45B2009BAB47 /* Infra.framework */; };
+		D8DD6B0724FC60D9003DC1C7 /* Infra.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D8768B9A24CE45B2009BAB47 /* Infra.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D8DD6B0A24FC60D9003DC1C7 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C60BE324D82F7D00C4326E /* Presentation.framework */; };
+		D8DD6B0B24FC60D9003DC1C7 /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D8C60BE324D82F7D00C4326E /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D8DD6B0E24FC60D9003DC1C7 /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82960D624DC470D0070F88E /* UI.framework */; };
+		D8DD6B0F24FC60D9003DC1C7 /* UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D82960D624DC470D0070F88E /* UI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D8DD6B1224FC60D9003DC1C7 /* Validation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DD6ABA24F99814003DC1C7 /* Validation.framework */; };
+		D8DD6B1324FC60D9003DC1C7 /* Validation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D8DD6ABA24F99814003DC1C7 /* Validation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D8DD6B1924FC619B003DC1C7 /* SignUpFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD6B1824FC619B003DC1C7 /* SignUpFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +180,48 @@
 			remoteGlobalIDString = D8DD6ADB24FC5FC6003DC1C7;
 			remoteInfo = Main;
 		};
+		D8DD6B0024FC60D9003DC1C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D87DCD1824CCBE8600A8CCD1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D87DCD4124CCC5BC00A8CCD1;
+			remoteInfo = Data;
+		};
+		D8DD6B0424FC60D9003DC1C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D87DCD1824CCBE8600A8CCD1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D87DCD3024CCBFA500A8CCD1;
+			remoteInfo = Domain;
+		};
+		D8DD6B0824FC60D9003DC1C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D87DCD1824CCBE8600A8CCD1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8768B9924CE45B2009BAB47;
+			remoteInfo = Infra;
+		};
+		D8DD6B0C24FC60D9003DC1C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D87DCD1824CCBE8600A8CCD1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8C60BE224D82F7D00C4326E;
+			remoteInfo = Presentation;
+		};
+		D8DD6B1024FC60D9003DC1C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D87DCD1824CCBE8600A8CCD1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D82960D524DC470D0070F88E;
+			remoteInfo = UI;
+		};
+		D8DD6B1424FC60D9003DC1C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D87DCD1824CCBE8600A8CCD1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8DD6AB924F99814003DC1C7;
+			remoteInfo = Validation;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -210,6 +265,22 @@
 			dstSubfolderSpec = 10;
 			files = (
 				D8DD6AD224F99974003DC1C7 /* Presentation.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8DD6B1624FC60D9003DC1C7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D8DD6B0324FC60D9003DC1C7 /* Domain.framework in Embed Frameworks */,
+				D8DD6B0F24FC60D9003DC1C7 /* UI.framework in Embed Frameworks */,
+				D8DD6AFF24FC60D9003DC1C7 /* Data.framework in Embed Frameworks */,
+				D8DD6B1324FC60D9003DC1C7 /* Validation.framework in Embed Frameworks */,
+				D8DD6B0B24FC60D9003DC1C7 /* Presentation.framework in Embed Frameworks */,
+				D8DD6B0724FC60D9003DC1C7 /* Infra.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +356,7 @@
 		D8DD6AEC24FC5FC9003DC1C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8DD6AF124FC5FC9003DC1C7 /* MainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8DD6AF724FC5FCA003DC1C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8DD6B1824FC619B003DC1C7 /* SignUpFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -387,6 +459,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8DD6B0224FC60D9003DC1C7 /* Domain.framework in Frameworks */,
+				D8DD6B0E24FC60D9003DC1C7 /* UI.framework in Frameworks */,
+				D8DD6AFE24FC60D9003DC1C7 /* Data.framework in Frameworks */,
+				D8DD6B1224FC60D9003DC1C7 /* Validation.framework in Frameworks */,
+				D8DD6B0A24FC60D9003DC1C7 /* Presentation.framework in Frameworks */,
+				D8DD6B0624FC60D9003DC1C7 /* Infra.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -801,6 +879,7 @@
 		D8DD6ADD24FC5FC6003DC1C7 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				D8DD6B1724FC6170003DC1C7 /* Factories */,
 				D8DD6ADE24FC5FC6003DC1C7 /* AppDelegate.swift */,
 				D8DD6AE024FC5FC6003DC1C7 /* SceneDelegate.swift */,
 				D8DD6AE724FC5FC9003DC1C7 /* Assets.xcassets */,
@@ -816,6 +895,14 @@
 				D8DD6AF724FC5FCA003DC1C7 /* Info.plist */,
 			);
 			path = MainTests;
+			sourceTree = "<group>";
+		};
+		D8DD6B1724FC6170003DC1C7 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				D8DD6B1824FC619B003DC1C7 /* SignUpFactory.swift */,
+			);
+			name = Factories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1103,10 +1190,17 @@
 				D8DD6AD824FC5FC6003DC1C7 /* Sources */,
 				D8DD6AD924FC5FC6003DC1C7 /* Frameworks */,
 				D8DD6ADA24FC5FC6003DC1C7 /* Resources */,
+				D8DD6B1624FC60D9003DC1C7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D8DD6B0124FC60D9003DC1C7 /* PBXTargetDependency */,
+				D8DD6B0524FC60D9003DC1C7 /* PBXTargetDependency */,
+				D8DD6B0924FC60D9003DC1C7 /* PBXTargetDependency */,
+				D8DD6B0D24FC60D9003DC1C7 /* PBXTargetDependency */,
+				D8DD6B1124FC60D9003DC1C7 /* PBXTargetDependency */,
+				D8DD6B1524FC60D9003DC1C7 /* PBXTargetDependency */,
 			);
 			name = Main;
 			productName = Main;
@@ -1459,6 +1553,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8DD6ADF24FC5FC6003DC1C7 /* AppDelegate.swift in Sources */,
+				D8DD6B1924FC619B003DC1C7 /* SignUpFactory.swift in Sources */,
 				D8DD6AE124FC5FC6003DC1C7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1542,6 +1637,36 @@
 			isa = PBXTargetDependency;
 			target = D8DD6ADB24FC5FC6003DC1C7 /* Main */;
 			targetProxy = D8DD6AF224FC5FCA003DC1C7 /* PBXContainerItemProxy */;
+		};
+		D8DD6B0124FC60D9003DC1C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D87DCD4124CCC5BC00A8CCD1 /* Data */;
+			targetProxy = D8DD6B0024FC60D9003DC1C7 /* PBXContainerItemProxy */;
+		};
+		D8DD6B0524FC60D9003DC1C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D87DCD3024CCBFA500A8CCD1 /* Domain */;
+			targetProxy = D8DD6B0424FC60D9003DC1C7 /* PBXContainerItemProxy */;
+		};
+		D8DD6B0924FC60D9003DC1C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D8768B9924CE45B2009BAB47 /* Infra */;
+			targetProxy = D8DD6B0824FC60D9003DC1C7 /* PBXContainerItemProxy */;
+		};
+		D8DD6B0D24FC60D9003DC1C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D8C60BE224D82F7D00C4326E /* Presentation */;
+			targetProxy = D8DD6B0C24FC60D9003DC1C7 /* PBXContainerItemProxy */;
+		};
+		D8DD6B1124FC60D9003DC1C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D82960D524DC470D0070F88E /* UI */;
+			targetProxy = D8DD6B1024FC60D9003DC1C7 /* PBXContainerItemProxy */;
+		};
+		D8DD6B1524FC60D9003DC1C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D8DD6AB924F99814003DC1C7 /* Validation */;
+			targetProxy = D8DD6B1424FC60D9003DC1C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
