@@ -11,7 +11,7 @@ import Domain
 import UI
 
 public final class SignUpComposers {
-    static func composerControllerWith(addAccount: AddAccount) -> SignUpViewController {
+    public static func composerControllerWith(addAccount: AddAccount) -> SignUpViewController {
         return ControllerFactory.makeSignUp(addAccount: addAccount)
     }
 }
