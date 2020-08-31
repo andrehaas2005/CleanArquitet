@@ -84,6 +84,7 @@
 		D8DD6B2124FC715B003DC1C7 /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82960CC24DC41290070F88E /* AddAccountSpy.swift */; };
 		D8DD6B2224FC71B4003DC1C7 /* TestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8768B8C24CE41E4009BAB47 /* TestExtension.swift */; };
 		D8DD6B2524FC7594003DC1C7 /* WeakVarProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD6B2424FC7594003DC1C7 /* WeakVarProxy.swift */; };
+		D8DD6B2A24FC7B2C003DC1C7 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD6B2924FC7B2C003DC1C7 /* Environment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -365,6 +366,9 @@
 		D8DD6B1D24FC6D85003DC1C7 /* SignUpComposers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpComposers.swift; sourceTree = "<group>"; };
 		D8DD6B1F24FC70C6003DC1C7 /* SignUpIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpIntegrationTests.swift; sourceTree = "<group>"; };
 		D8DD6B2424FC7594003DC1C7 /* WeakVarProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakVarProxy.swift; sourceTree = "<group>"; };
+		D8DD6B2724FC79FB003DC1C7 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		D8DD6B2824FC7A8F003DC1C7 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		D8DD6B2924FC7B2C003DC1C7 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -887,6 +891,7 @@
 		D8DD6ADD24FC5FC6003DC1C7 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				D8DD6B2624FC79DD003DC1C7 /* Env */,
 				D8DD6B2324FC7567003DC1C7 /* Proxies */,
 				D8DD6B1C24FC6D64003DC1C7 /* Composers */,
 				D8DD6B1724FC6170003DC1C7 /* Factories */,
@@ -930,6 +935,16 @@
 				D8DD6B2424FC7594003DC1C7 /* WeakVarProxy.swift */,
 			);
 			path = Proxies;
+			sourceTree = "<group>";
+		};
+		D8DD6B2624FC79DD003DC1C7 /* Env */ = {
+			isa = PBXGroup;
+			children = (
+				D8DD6B2724FC79FB003DC1C7 /* Debug.xcconfig */,
+				D8DD6B2824FC7A8F003DC1C7 /* Release.xcconfig */,
+				D8DD6B2924FC7B2C003DC1C7 /* Environment.swift */,
+			);
+			path = Env;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1581,6 +1596,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8DD6B1B24FC6C65003DC1C7 /* UseCaseFactory.swift in Sources */,
+				D8DD6B2A24FC7B2C003DC1C7 /* Environment.swift in Sources */,
 				D8DD6ADF24FC5FC6003DC1C7 /* AppDelegate.swift in Sources */,
 				D8DD6B1E24FC6D85003DC1C7 /* SignUpComposers.swift in Sources */,
 				D8DD6B2524FC7594003DC1C7 /* WeakVarProxy.swift in Sources */,
@@ -2441,6 +2457,7 @@
 		};
 		D8DD6AF924FC5FCA003DC1C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8DD6B2724FC79FB003DC1C7 /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -2459,6 +2476,7 @@
 		};
 		D8DD6AFA24FC5FCA003DC1C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8DD6B2824FC7A8F003DC1C7 /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
