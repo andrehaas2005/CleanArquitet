@@ -1,8 +1,8 @@
 //
-//  EmailValidator.swift
+//  EmailValidatorSpy.swift
 //  Presentation
 //
-//  Created by André Haas on 03/08/20.
+//  Created by André Haas on 31/08/20.
 //  Copyright © 2020 André Haas. All rights reserved.
 //
 
