@@ -86,6 +86,7 @@
 		D8DD6B2524FC7594003DC1C7 /* WeakVarProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD6B2424FC7594003DC1C7 /* WeakVarProxy.swift */; };
 		D8DD6B2A24FC7B2C003DC1C7 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD6B2924FC7B2C003DC1C7 /* Environment.swift */; };
 		D8DD6B2C24FC8321003DC1C7 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82960CF24DC432D0070F88E /* TestFactories.swift */; };
+		D8DD6B2F24FC8A81003DC1C7 /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD6B2E24FC8A81003DC1C7 /* MainQueueDispatchDecorator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -370,6 +371,7 @@
 		D8DD6B2724FC79FB003DC1C7 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		D8DD6B2824FC7A8F003DC1C7 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		D8DD6B2924FC7B2C003DC1C7 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		D8DD6B2E24FC8A81003DC1C7 /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -892,6 +894,7 @@
 		D8DD6ADD24FC5FC6003DC1C7 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				D8DD6B2D24FC8A66003DC1C7 /* Decorators */,
 				D8DD6B2624FC79DD003DC1C7 /* Env */,
 				D8DD6B2324FC7567003DC1C7 /* Proxies */,
 				D8DD6B1C24FC6D64003DC1C7 /* Composers */,
@@ -954,6 +957,14 @@
 				D8DD6B1F24FC70C6003DC1C7 /* SignUpComposerTests.swift */,
 			);
 			name = Composers;
+			sourceTree = "<group>";
+		};
+		D8DD6B2D24FC8A66003DC1C7 /* Decorators */ = {
+			isa = PBXGroup;
+			children = (
+				D8DD6B2E24FC8A81003DC1C7 /* MainQueueDispatchDecorator.swift */,
+			);
+			name = Decorators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1605,6 +1616,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8DD6B1B24FC6C65003DC1C7 /* UseCaseFactory.swift in Sources */,
+				D8DD6B2F24FC8A81003DC1C7 /* MainQueueDispatchDecorator.swift in Sources */,
 				D8DD6B2A24FC7B2C003DC1C7 /* Environment.swift in Sources */,
 				D8DD6ADF24FC5FC6003DC1C7 /* AppDelegate.swift in Sources */,
 				D8DD6B1E24FC6D85003DC1C7 /* SignUpComposers.swift in Sources */,
