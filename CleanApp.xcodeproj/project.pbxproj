@@ -84,6 +84,7 @@
 		D8DD6B2024FC70C6003DC1C7 /* SignUpIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD6B1F24FC70C6003DC1C7 /* SignUpIntegrationTests.swift */; };
 		D8DD6B2124FC715B003DC1C7 /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82960CC24DC41290070F88E /* AddAccountSpy.swift */; };
 		D8DD6B2224FC71B4003DC1C7 /* TestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8768B8C24CE41E4009BAB47 /* TestExtension.swift */; };
+		D8DD6B2524FC7594003DC1C7 /* WeakVarProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD6B2424FC7594003DC1C7 /* WeakVarProxy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -365,6 +366,7 @@
 		D8DD6B1A24FC6C65003DC1C7 /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
 		D8DD6B1D24FC6D85003DC1C7 /* SignUpComposers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpComposers.swift; sourceTree = "<group>"; };
 		D8DD6B1F24FC70C6003DC1C7 /* SignUpIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpIntegrationTests.swift; sourceTree = "<group>"; };
+		D8DD6B2424FC7594003DC1C7 /* WeakVarProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakVarProxy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -887,6 +889,7 @@
 		D8DD6ADD24FC5FC6003DC1C7 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				D8DD6B2324FC7567003DC1C7 /* Proxies */,
 				D8DD6B1C24FC6D64003DC1C7 /* Composers */,
 				D8DD6B1724FC6170003DC1C7 /* Factories */,
 				D8DD6ADE24FC5FC6003DC1C7 /* AppDelegate.swift */,
@@ -922,6 +925,14 @@
 				D8DD6B1D24FC6D85003DC1C7 /* SignUpComposers.swift */,
 			);
 			name = Composers;
+			sourceTree = "<group>";
+		};
+		D8DD6B2324FC7567003DC1C7 /* Proxies */ = {
+			isa = PBXGroup;
+			children = (
+				D8DD6B2424FC7594003DC1C7 /* WeakVarProxy.swift */,
+			);
+			path = Proxies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1576,6 +1587,7 @@
 				D8DD6ADF24FC5FC6003DC1C7 /* AppDelegate.swift in Sources */,
 				D8DD6B1924FC619B003DC1C7 /* ControllerFactory.swift in Sources */,
 				D8DD6B1E24FC6D85003DC1C7 /* SignUpComposers.swift in Sources */,
+				D8DD6B2524FC7594003DC1C7 /* WeakVarProxy.swift in Sources */,
 				D8DD6AE124FC5FC6003DC1C7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
