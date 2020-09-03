@@ -13,7 +13,6 @@ import Validation
 import Domain
 import Infra
 
-
 public final class SignUpComposers {
     public static func composerControllerWith(addAccount: AddAccount) -> SignUpViewController {
         let controller = SignUpViewController.instantiate()

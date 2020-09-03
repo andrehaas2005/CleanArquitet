@@ -7,12 +7,16 @@
 		<key>CI.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< HEAD
 			<integer>4</integer>
 		</dict>
 		<key>Core.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>6</integer>
+=======
+			<integer>8</integer>
+>>>>>>> 7ab7ff1a5b44a6ba5c29971f115de061e23291e3
 		</dict>
 		<key>Data.xcscheme_^#shared#^_</key>
 		<dict>
@@ -32,7 +36,11 @@
 		<key>Main.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< HEAD
 			<integer>5</integer>
+=======
+			<integer>4</integer>
+>>>>>>> 7ab7ff1a5b44a6ba5c29971f115de061e23291e3
 		</dict>
 		<key>Presentation.xcscheme_^#shared#^_</key>
 		<dict>
@@ -97,6 +105,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+<<<<<<< HEAD
 		<key>D8DD6ADB24FC5FC6003DC1C7</key>
 		<dict>
 			<key>primary</key>
@@ -107,6 +116,8 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+=======
+>>>>>>> 7ab7ff1a5b44a6ba5c29971f115de061e23291e3
 	</dict>
 </dict>
 </plist>
