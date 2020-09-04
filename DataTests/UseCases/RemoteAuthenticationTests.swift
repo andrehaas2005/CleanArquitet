@@ -16,16 +16,31 @@ class RemoteAuthenticationTests: XCTestCase {
         let url = makeUrl()
         let (sut, httpClientSpy) = makeSut()
 
-        sut.auth(authenticationModel: makeAuthencitarionModel())
+        sut.auth(authenticationModel: makeAuthencitarionModel()){_ in}
         XCTAssertEqual(httpClientSpy.urls, [url])
     }
 
     func test_post_httpClient_correct_data(){
         let (sut, httpClientSpy) = makeSut()
         let authenticationModel = makeAuthencitarionModel()
-        sut.auth(authenticationModel: authenticationModel)
+        sut.auth(authenticationModel: authenticationModel){_ in}
         XCTAssertEqual(httpClientSpy.data, authenticationModel.toData())
     }
+
+
+    func test_post_httpClient_completion_error(){
+        let (sut, httpClientSpy) = makeSut()
+        expect(sut, completeWith: .failure(.unexpected), when: {
+        httpClientSpy.completeWithError(.noConnectivity)
+        })
+    }
+
+    func test_auth_should_complete_with_expired_in_use_error_if_client_completes_with_unauthorized(){
+           let (sut, httpClientSpy) = makeSut()
+           expect(sut, completeWith: .failure(.expiredSession), when: {
+           httpClientSpy.completeWithError(.unauthorized)
+           })
+       }
 
 }
 
@@ -40,10 +55,10 @@ extension RemoteAuthenticationTests {
         return (sut, httpClientSpy)
     }
 
-    func expect(_ sut: RemoteAddAccount, completeWith expectedResult: AddAccount.Result, when action: ()->Void, file: StaticString = #file, line: UInt = #line){
+    func expect(_ sut: RemoteAuthentication, completeWith expectedResult: Authentication.Result, when action: ()->Void, file: StaticString = #file, line: UInt = #line){
 
         let exp = expectation(description: "wainting")
-        sut.add(addAccountModel: makeAddAccountModel()) { receiveResult in
+        sut.auth(authenticationModel: makeAuthencitarionModel()) { receiveResult in
             switch (expectedResult, receiveResult) {
             case (.failure(let expectedError),.failure(let receiveError)):
                 XCTAssertEqual(expectedError, receiveError, file: file, line: line)
