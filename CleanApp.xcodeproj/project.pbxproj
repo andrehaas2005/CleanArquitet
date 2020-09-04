@@ -38,6 +38,11 @@
 		D8630DBC24FE94AC008A949E /* Validation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D8DD6ABA24F99814003DC1C7 /* Validation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D8630DC024FE9C7C008A949E /* RequiredFieldValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8630DBF24FE9C7C008A949E /* RequiredFieldValidationTests.swift */; };
 		D864688D250281E400F5EEBD /* EmailValidatorAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D864688C250281E400F5EEBD /* EmailValidatorAdapterFactory.swift */; };
+		D8646890250286D800F5EEBD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D864688F250286D800F5EEBD /* Images.xcassets */; };
+		D864689225028DE600F5EEBD /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D864689125028DE600F5EEBD /* UIColorExtension.swift */; };
+		D864689425028EC500F5EEBD /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D864689325028EC500F5EEBD /* Color.swift */; };
+		D8646897250292DD00F5EEBD /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8646896250292DD00F5EEBD /* RoundedTextField.swift */; };
+		D86468992502954400F5EEBD /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86468982502954400F5EEBD /* NavigationController.swift */; };
 		D8768B7924CDB462009BAB47 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8768B7824CDB462009BAB47 /* Model.swift */; };
 		D8768B7B24CDB540009BAB47 /* RemoteAddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8768B7A24CDB540009BAB47 /* RemoteAddAccount.swift */; };
 		D8768B7D24CDB5BD009BAB47 /* HttpPostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8768B7C24CDB5BD009BAB47 /* HttpPostClient.swift */; };
@@ -347,6 +352,11 @@
 		D8630DB524FE8F2C008A949E /* ValidationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationSpy.swift; sourceTree = "<group>"; };
 		D8630DBF24FE9C7C008A949E /* RequiredFieldValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequiredFieldValidationTests.swift; sourceTree = "<group>"; };
 		D864688C250281E400F5EEBD /* EmailValidatorAdapterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidatorAdapterFactory.swift; sourceTree = "<group>"; };
+		D864688F250286D800F5EEBD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D864689125028DE600F5EEBD /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		D864689325028EC500F5EEBD /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		D8646896250292DD00F5EEBD /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		D86468982502954400F5EEBD /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		D8768B7824CDB462009BAB47 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		D8768B7A24CDB540009BAB47 /* RemoteAddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccount.swift; sourceTree = "<group>"; };
 		D8768B7C24CDB5BD009BAB47 /* HttpPostClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpPostClient.swift; sourceTree = "<group>"; };
@@ -648,6 +658,8 @@
 		D82960D724DC470D0070F88E /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				D8646895250292AB00F5EEBD /* Components */,
+				D864688E2502869800F5EEBD /* Resources */,
 				D8DD6AB324F99596003DC1C7 /* Helpers */,
 				D82960D924DC470D0070F88E /* Info.plist */,
 				D8DD6AAC24F95FD3003DC1C7 /* Scenes */,
@@ -679,6 +691,23 @@
 				D8DD6AC724F99814003DC1C7 /* EmailValidatorAdapterTests.swift */,
 			);
 			name = Validators;
+			sourceTree = "<group>";
+		};
+		D864688E2502869800F5EEBD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D864688F250286D800F5EEBD /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D8646895250292AB00F5EEBD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D8646896250292DD00F5EEBD /* RoundedTextField.swift */,
+				D86468982502954400F5EEBD /* NavigationController.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		D8768B7E24CDC185009BAB47 /* UseCases */ = {
@@ -988,6 +1017,8 @@
 			isa = PBXGroup;
 			children = (
 				D8DD6AB124F991F3003DC1C7 /* Storyboarded.swift */,
+				D864689125028DE600F5EEBD /* UIColorExtension.swift */,
+				D864689325028EC500F5EEBD /* Color.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -1506,6 +1537,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8B07E9224F4255F00228FFE /* SignUp.storyboard in Resources */,
+				D8646890250286D800F5EEBD /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1610,7 +1642,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8B07E9024F424EC00228FFE /* SignUpViewController.swift in Sources */,
+				D86468992502954400F5EEBD /* NavigationController.swift in Sources */,
+				D864689425028EC500F5EEBD /* Color.swift in Sources */,
 				D8DD6AB424F995A4003DC1C7 /* Storyboarded.swift in Sources */,
+				D8646897250292DD00F5EEBD /* RoundedTextField.swift in Sources */,
+				D864689225028DE600F5EEBD /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
