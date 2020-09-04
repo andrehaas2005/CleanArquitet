@@ -9,27 +9,28 @@
 import Foundation
 import Domain
 
-public class SignUpPresenter {
+public class LoginPresenter {
     private let alertView: AlertView
-    private let addAccount: AddAccount
+    private let authentication: Authentication
     private let loadingView: LoadingView
     private let validation: Validation
     public init(alertView: AlertView,
-                addAccount: AddAccount,
+                authentication: Authentication,
                 loadingView: LoadingView,
                 validation: Validation){
         self.alertView = alertView
-        self.addAccount = addAccount
+        self.authentication = authentication
         self.loadingView = loadingView
         self.validation = validation
     }
-    public func signUp(viewModel: SignUpViewModel){
+    public func login(viewModel: LoginViewModel){
         if let message = validation.validate(data: viewModel.toJson()) {
             alertView.showMessage(viewModel: AlertViewModel(title: "Falha na validação",
                                                             message: message))
         } else {
             loadingView.display(viewModel: LoadingViewModel(isLoading: true))
-            addAccount.add(addAccountModel: viewModel.toAddAccountModel()) { [weak self] result in
+
+            authentication.auth(authenticationModel: viewModel.toAutheticationModel()) { [weak self]  (result) in
                 guard let self = self else { return }
                 self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
                 switch result {
@@ -39,18 +40,15 @@ public class SignUpPresenter {
                 case .failure(let error):
                     var message: String!
                     switch error {
-                    case .emailInUse:
-                        message = "Esse e-mail já esta em uso"
+                    case .expiredSession:
+                        message = "Login/Senha não conferem"
                     default:
                         message = "Algo inesperado aconteceu, tente novamente mais tarde"
-
                     }
                     self.alertView.showMessage(viewModel: AlertViewModel(title: "Erro",
                                                                          message: message))
                 }
-
             }
-
         }
     }
 }
