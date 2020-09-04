@@ -14,7 +14,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = SignUpComposers.composerControllerWith(addAccount: UseCaseFactory.makeRemoteAddAccount())
+        let httpClient = makeAlamofireAdapter()
+        let addAccount = makeRemoteAddAccount(httpClient: httpClient)
+        window?.rootViewController = makeSignUpController(addAccount: addAccount)
         window?.makeKeyAndVisible()
     }
 }
