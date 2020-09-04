@@ -21,4 +21,8 @@ public struct SignUpViewModel: Model {
         self.password = password
         self.passwordConfirmation = passwordConfirmation
     }
+
+    public func toAddAccountModel() -> AddAccountModel {
+        return AddAccountModel(name: self.name!, email: self.email!, password: self.password!, passwordConfirmation: self.passwordConfirmation!)
+    }
 }

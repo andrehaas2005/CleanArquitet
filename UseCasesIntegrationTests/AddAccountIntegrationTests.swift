@@ -13,31 +13,29 @@ import Domain
 
 class UseCasesIntegrationTests: XCTestCase {
 
-    func test_Add_Account() {
-        let url = URL(string: "https://clean-node-api.herokuapp.com/api/signup")!
-        let alamofireAdapter = AlamofireAdapter()
-        let sut = RemoteAddAccount(url: url, httpClient: alamofireAdapter)
-        let addAccountModel = AddAccountModel(name: "Andre Haas",
-                                              email: "andrehaas2005@gmail.com",
-                                              password: "123qazxsw",
-                                              passwordConfirmation: "123qazxsw")
-        let exp = expectation(description: "waiting")
-        sut.add(addAccountModel: addAccountModel) { (result) in
-            switch result {
-            case .success(let account):
-                XCTAssertNotNil(account.id)
-                XCTAssertEqual(account.name, addAccountModel.name)
-                XCTAssertEqual(account.email, addAccountModel.email)
-            case .failure(let error):
-                XCTFail("Expect success got \(error.localizedDescription) instead")
-            }
-            exp.fulfill()
-        }
-        wait(for: [exp], timeout: 10)
-    }
+//    func test_Add_Account() {
+//        let url = URL(string: "https://fordevs.herokuapp.com/api/signup")!
+//        let alamofireAdapter = AlamofireAdapter()
+//        let sut = RemoteAddAccount(url: url, httpClient: alamofireAdapter)
+//        let addAccountModel = AddAccountModel(name: "Andre Haas",
+//                                              email: "andrehaas2005@gmail.com",
+//                                              password: "123qazxsw",
+//                                              passwordConfirmation: "123qazxsw")
+//        let exp = expectation(description: "waiting")
+//        sut.add(addAccountModel: addAccountModel) { (result) in
+//            switch result {
+//            case .success(let account):
+//                XCTAssertNotNil(account.accessToken)
+//            case .failure(let error):
+//                XCTFail("Expect success got \(error.localizedDescription) instead")
+//            }
+//            exp.fulfill()
+//        }
+//        wait(for: [exp], timeout: 20)
+//    }
 
     func test_Add_Account_failure() {
-        let url = URL(string: "https://clean-node-api.herokuapp.com/api/signup")!
+        let url = URL(string: "https://fordevs.herokuapp.com/api/signup")!
         let alamofireAdapter = AlamofireAdapter()
         let sut = RemoteAddAccount(url: url, httpClient: alamofireAdapter)
         let addAccountModel = AddAccountModel(name: "Andre Haas",
@@ -54,6 +52,6 @@ class UseCasesIntegrationTests: XCTestCase {
             }
             exp.fulfill()
         }
-        wait(for: [exp], timeout: 10)
+        wait(for: [exp], timeout: 20)
     }
 }

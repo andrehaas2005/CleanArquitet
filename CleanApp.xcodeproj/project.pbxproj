@@ -18,7 +18,6 @@
 		D80B6387250040A900B9EC1D /* TestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8768B8C24CE41E4009BAB47 /* TestExtension.swift */; };
 		D80B638825016F3A00B9EC1D /* EmailValidatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82960C724DC40300070F88E /* EmailValidatorSpy.swift */; };
 		D82960BF24DC3BAB0070F88E /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82960BE24DC3BAB0070F88E /* SignUpViewModel.swift */; };
-		D82960C124DC3C5C0070F88E /* SignUpMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82960C024DC3C5C0070F88E /* SignUpMapper.swift */; };
 		D82960C524DC3FA60070F88E /* AlertViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82960C424DC3FA60070F88E /* AlertViewSpy.swift */; };
 		D82960CD24DC41290070F88E /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82960CC24DC41290070F88E /* AddAccountSpy.swift */; };
 		D82960D024DC432D0070F88E /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82960CF24DC432D0070F88E /* TestFactories.swift */; };
@@ -36,7 +35,6 @@
 		D8630DBB24FE94AC008A949E /* Validation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DD6ABA24F99814003DC1C7 /* Validation.framework */; };
 		D8630DBC24FE94AC008A949E /* Validation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D8DD6ABA24F99814003DC1C7 /* Validation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D8630DC024FE9C7C008A949E /* RequiredFieldValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8630DBF24FE9C7C008A949E /* RequiredFieldValidationTests.swift */; };
-
 		D8768B7924CDB462009BAB47 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8768B7824CDB462009BAB47 /* Model.swift */; };
 		D8768B7B24CDB540009BAB47 /* RemoteAddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8768B7A24CDB540009BAB47 /* RemoteAddAccount.swift */; };
 		D8768B7D24CDB5BD009BAB47 /* HttpPostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8768B7C24CDB5BD009BAB47 /* HttpPostClient.swift */; };
@@ -329,7 +327,6 @@
 		D80B6382250030FD00B9EC1D /* ValidationComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationComposite.swift; sourceTree = "<group>"; };
 		D80B638525003E9700B9EC1D /* ValidationCompositeSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationCompositeSpy.swift; sourceTree = "<group>"; };
 		D82960BE24DC3BAB0070F88E /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
-		D82960C024DC3C5C0070F88E /* SignUpMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMapper.swift; sourceTree = "<group>"; };
 		D82960C424DC3FA60070F88E /* AlertViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewSpy.swift; sourceTree = "<group>"; };
 		D82960C724DC40300070F88E /* EmailValidatorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorSpy.swift; sourceTree = "<group>"; };
 		D82960CC24DC41290070F88E /* AddAccountSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountSpy.swift; sourceTree = "<group>"; };
@@ -532,7 +529,6 @@
 		D80B637324FFE5C900B9EC1D /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				D8630DAE24FD54BE008A949E /* EmailValidator.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -552,7 +548,6 @@
 			isa = PBXGroup;
 			children = (
 				D80B638525003E9700B9EC1D /* ValidationCompositeSpy.swift */,
-				D82960C724DC40300070F88E /* EmailValidatorSpy.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -573,7 +568,6 @@
 			children = (
 				D8C60BFA24D85EE000C4326E /* SignUpPresenter.swift */,
 				D82960BE24DC3BAB0070F88E /* SignUpViewModel.swift */,
-				D82960C024DC3C5C0070F88E /* SignUpMapper.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -1663,7 +1657,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D82960C124DC3C5C0070F88E /* SignUpMapper.swift in Sources */,
 				D8C60BFB24D85EE000C4326E /* SignUpPresenter.swift in Sources */,
 				D8C60C0B24DB1E5E00C4326E /* LoadingView.swift in Sources */,
 				D82960BF24DC3BAB0070F88E /* SignUpViewModel.swift in Sources */,
