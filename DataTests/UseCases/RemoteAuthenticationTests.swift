@@ -41,6 +41,32 @@ class RemoteAuthenticationTests: XCTestCase {
            httpClientSpy.completeWithError(.unauthorized)
            })
        }
+    func test_auth_post_httpClient_completion_account(){
+           let (sut, httpClientSpy) = makeSut()
+           let account = makeAccountModel()
+           expect(sut, completeWith: .success(account),when: {
+               httpClientSpy.completeWithData(account.toData()!)
+           })
+       }
+
+    func test_uth_post_httpClient_completion_account_invalid(){
+        let (sut, httpClientSpy) = makeSut()
+        expect(sut, completeWith: .failure(.unexpected), when: {
+            httpClientSpy.completeWithData(makeInvalidData())
+        })
+    }
+
+
+    func test_post_httpClient_not_completion_account_invalid(){
+        let httpClientSpy = HttpClientSpy()
+        var sut: RemoteAuthentication?  = RemoteAuthentication(url: makeUrl(), httpClient: httpClientSpy)
+        var result: Authentication.Result?
+        sut?.auth(authenticationModel: makeAuthencitarionModel()){ result = $0 }
+        sut = nil
+        httpClientSpy.completeWithError(.noConnectivity)
+        XCTAssertNil(result)
+    }
+
 
 }
 
