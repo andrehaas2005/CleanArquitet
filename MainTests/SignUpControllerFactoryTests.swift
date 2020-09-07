@@ -12,7 +12,7 @@ import UI
 import Validation
 
 
-class SignUpFactoryTests: XCTestCase {
+class SignUpControllerFactoryTests: XCTestCase {
 
     func test_backgroud_request_should_complete_on_main_thread() throws {
         let (sut, addAccountSpy) = makeSut()
@@ -36,7 +36,7 @@ class SignUpFactoryTests: XCTestCase {
         XCTAssertEqual(validations[5] as! CompareFieldsValidation, CompareFieldsValidation(fieldName: "password", fieldNameToCompare: "passwordConfirmation", fieldLabel: "Confirmar Senha"))
     }
 }
-extension SignUpFactoryTests {
+extension SignUpControllerFactoryTests {
     func makeSut(file: StaticString = #file, line: UInt = #line) -> (sut: SignUpViewController, addAccountSpy: AddAccountSpy) {
         let addAccountSpy = AddAccountSpy()
         let sut = makeSignUpController(addAccount: MainQueueDispatchDecorator(addAccountSpy))
