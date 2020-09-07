@@ -113,7 +113,7 @@ class LoginPresenterTests: XCTestCase {
         let exp = expectation(description: "waiting")
         alertViewSpy.observe { [weak self] (viewModel) in
             guard  self != nil else { return }
-            XCTAssertEqual(viewModel, AlertViewModel(title: "Sucesso", message: "Conta criada com sucesso."))
+            XCTAssertEqual(viewModel, AlertViewModel(title: "Sucesso", message: "Acesso autorizado."))
             exp.fulfill()
         }
         sut.login(viewModel: loginViewModel)
