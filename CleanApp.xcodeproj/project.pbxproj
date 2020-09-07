@@ -51,6 +51,9 @@
 		D86468A72502CBE900F5EEBD /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86468A62502CBE900F5EEBD /* LoginPresenter.swift */; };
 		D86468A92502CDD100F5EEBD /* AuthenticationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86468A82502CDD100F5EEBD /* AuthenticationSpy.swift */; };
 		D86468AC2502D97A00F5EEBD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86468AB2502D97A00F5EEBD /* Login.storyboard */; };
+		D86468AF2502DAB100F5EEBD /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86468AE2502DAB100F5EEBD /* LoginViewControllerTests.swift */; };
+		D86468B12502DB1F00F5EEBD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86468B02502DB1F00F5EEBD /* LoginViewController.swift */; };
+		D86468B22506A45C00F5EEBD /* TestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8768B8C24CE41E4009BAB47 /* TestExtension.swift */; };
 		D8768B7924CDB462009BAB47 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8768B7824CDB462009BAB47 /* Model.swift */; };
 		D8768B7B24CDB540009BAB47 /* RemoteAddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8768B7A24CDB540009BAB47 /* RemoteAddAccount.swift */; };
 		D8768B7D24CDB5BD009BAB47 /* HttpPostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8768B7C24CDB5BD009BAB47 /* HttpPostClient.swift */; };
@@ -373,6 +376,8 @@
 		D86468A62502CBE900F5EEBD /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		D86468A82502CDD100F5EEBD /* AuthenticationSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationSpy.swift; sourceTree = "<group>"; };
 		D86468AB2502D97A00F5EEBD /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		D86468AE2502DAB100F5EEBD /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
+		D86468B02502DB1F00F5EEBD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D8768B7824CDB462009BAB47 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		D8768B7A24CDB540009BAB47 /* RemoteAddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccount.swift; sourceTree = "<group>"; };
 		D8768B7C24CDB5BD009BAB47 /* HttpPostClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpPostClient.swift; sourceTree = "<group>"; };
@@ -747,9 +752,18 @@
 		D86468AA2502D94A00F5EEBD /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				D86468B02502DB1F00F5EEBD /* LoginViewController.swift */,
 				D86468AB2502D97A00F5EEBD /* Login.storyboard */,
 			);
 			name = Login;
+			sourceTree = "<group>";
+		};
+		D86468AD2502DAA300F5EEBD /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D86468AE2502DAB100F5EEBD /* LoginViewControllerTests.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		D8768B7E24CDC185009BAB47 /* UseCases */ = {
@@ -1048,6 +1062,7 @@
 		D8DD6AAD24F95FEB003DC1C7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				D86468AD2502DAA300F5EEBD /* Login */,
 				D8DD6AAB24F95F89003DC1C7 /* SignUp */,
 			);
 			path = Scenes;
@@ -1690,6 +1705,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D86468B12502DB1F00F5EEBD /* LoginViewController.swift in Sources */,
 				D8B07E9024F424EC00228FFE /* SignUpViewController.swift in Sources */,
 				D86468992502954400F5EEBD /* NavigationController.swift in Sources */,
 				D864689425028EC500F5EEBD /* Color.swift in Sources */,
@@ -1703,8 +1719,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D86468AF2502DAB100F5EEBD /* LoginViewControllerTests.swift in Sources */,
 				D82960E424DC470D0070F88E /* SignUpViewControllerTests.swift in Sources */,
 				D8DD6AB024F96173003DC1C7 /* TestExtensions.swift in Sources */,
+				D86468B22506A45C00F5EEBD /* TestExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
