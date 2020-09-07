@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="crj-G8-16V">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome-->
+        <scene sceneID="Uad-tp-KQf">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeViewController" id="crj-G8-16V" userLabel="Welcome" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lfK-nH-JA2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ivW-f1-257" userLabel="Logo">
+                                <rect key="frame" x="147" y="92" width="120" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="eym-zT-9iO"/>
+                                    <constraint firstAttribute="width" constant="120" id="tj9-nc-69G"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJV-K1-dHY" userLabel="Separator">
+                                <rect key="frame" x="32" y="230" width="350" height="1"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="aZ6-ln-bUc"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VEJA BEM-VINDO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdR-2a-asC" userLabel="Ttile">
+                                <rect key="frame" x="32" y="278" width="350" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8I3-pU-mlR">
+                                <rect key="frame" x="32" y="342" width="350" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Q9q-NF-Can"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="LOGIN">
+                                    <color key="titleColor" red="0.33725490200000002" green="0.0" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OU" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RfM-7z-X2J">
+                                <rect key="frame" x="32" y="426" width="350" height="19.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrt-ni-xX1" userLabel="SignUp Button">
+                                <rect key="frame" x="32" y="469.5" width="350" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="KLY-Gx-Prp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="CRIAR CONTA">
+                                    <color key="titleColor" red="0.33725490200000002" green="0.0" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.53333333329999999" green="0.054901960780000002" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RfM-7z-X2J" firstAttribute="leading" secondItem="8I3-pU-mlR" secondAttribute="leading" id="BhW-i9-4tT"/>
+                            <constraint firstItem="vrt-ni-xX1" firstAttribute="trailing" secondItem="8I3-pU-mlR" secondAttribute="trailing" id="CRG-LF-Ghi"/>
+                            <constraint firstItem="aJV-K1-dHY" firstAttribute="top" secondItem="ivW-f1-257" secondAttribute="bottom" constant="48" id="DcT-xp-h47"/>
+                            <constraint firstItem="ivW-f1-257" firstAttribute="top" secondItem="E2w-JR-3mZ" secondAttribute="top" constant="48" id="Frg-Ye-2Zc"/>
+                            <constraint firstItem="8I3-pU-mlR" firstAttribute="leading" secondItem="FdR-2a-asC" secondAttribute="leading" id="GIf-hs-aBF"/>
+                            <constraint firstItem="FdR-2a-asC" firstAttribute="leading" secondItem="aJV-K1-dHY" secondAttribute="leading" id="Q5X-NE-Of9"/>
+                            <constraint firstItem="FdR-2a-asC" firstAttribute="trailing" secondItem="aJV-K1-dHY" secondAttribute="trailing" id="SiQ-B3-ge8"/>
+                            <constraint firstItem="vrt-ni-xX1" firstAttribute="top" secondItem="RfM-7z-X2J" secondAttribute="bottom" constant="24" id="aGS-51-GRY"/>
+                            <constraint firstItem="FdR-2a-asC" firstAttribute="top" secondItem="aJV-K1-dHY" secondAttribute="top" constant="48" id="ce8-oW-9gb"/>
+                            <constraint firstItem="RfM-7z-X2J" firstAttribute="top" secondItem="8I3-pU-mlR" secondAttribute="bottom" constant="24" id="cij-eq-PFz"/>
+                            <constraint firstItem="8I3-pU-mlR" firstAttribute="trailing" secondItem="FdR-2a-asC" secondAttribute="trailing" id="e3Z-53-kFl"/>
+                            <constraint firstItem="E2w-JR-3mZ" firstAttribute="trailing" secondItem="aJV-K1-dHY" secondAttribute="trailing" constant="32" id="emK-eX-3c7"/>
+                            <constraint firstItem="aJV-K1-dHY" firstAttribute="leading" secondItem="E2w-JR-3mZ" secondAttribute="leading" constant="32" id="eu9-mt-n06"/>
+                            <constraint firstItem="RfM-7z-X2J" firstAttribute="trailing" secondItem="8I3-pU-mlR" secondAttribute="trailing" id="sz9-NR-cl9"/>
+                            <constraint firstItem="FdR-2a-asC" firstAttribute="centerX" secondItem="E2w-JR-3mZ" secondAttribute="centerX" id="uqe-Og-ACC"/>
+                            <constraint firstItem="ivW-f1-257" firstAttribute="centerX" secondItem="E2w-JR-3mZ" secondAttribute="centerX" id="w5K-7L-Qki"/>
+                            <constraint firstItem="8I3-pU-mlR" firstAttribute="top" secondItem="FdR-2a-asC" secondAttribute="bottom" constant="40" id="wmo-xK-FsG"/>
+                            <constraint firstItem="vrt-ni-xX1" firstAttribute="leading" secondItem="8I3-pU-mlR" secondAttribute="leading" id="zk4-Da-sao"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="E2w-JR-3mZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="8I3-pU-mlR" id="lUQ-wP-0Gu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jCx-Cy-PMV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="71.651785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="120" height="87"/>
+    </resources>
+</document>
