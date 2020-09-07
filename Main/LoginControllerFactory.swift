@@ -13,8 +13,10 @@ import Validation
 import Domain
 import Infra
 
-
-public func makeLoginController(authentication: Authentication) -> LoginViewController {
+public func makeLoginController() -> LoginViewController {
+    return makeLoginControllerWith(authentication: makeRemoteAuthentication())
+}
+public func makeLoginControllerWith(authentication: Authentication) -> LoginViewController {
     let controller = LoginViewController.instantiate()
     let validationComposite = ValidationComposite(validatins: makeLoginValidations())
     let presenter =  LoginPresenter(alertView: WeakVarProxy(controller), authentication: authentication, loadingView: WeakVarProxy(controller), validation: validationComposite)

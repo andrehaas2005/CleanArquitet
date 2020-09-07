@@ -129,6 +129,7 @@
 		D8DD6B2F24FC8A81003DC1C7 /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD6B2E24FC8A81003DC1C7 /* MainQueueDispatchDecorator.swift */; };
 		D8FE6E862506C6AE00E9CFAC /* WelcomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FE6E852506C6AE00E9CFAC /* WelcomeRouterTests.swift */; };
 		D8FE6E882506CE8A00E9CFAC /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FE6E872506CE8A00E9CFAC /* WelcomeRouter.swift */; };
+		D8FE6E8A2506D98800E9CFAC /* WelcomeControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FE6E892506D98700E9CFAC /* WelcomeControllerFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -458,6 +459,7 @@
 		D8DD6B2E24FC8A81003DC1C7 /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
 		D8FE6E852506C6AE00E9CFAC /* WelcomeRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouterTests.swift; sourceTree = "<group>"; };
 		D8FE6E872506CE8A00E9CFAC /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
+		D8FE6E892506D98700E9CFAC /* WelcomeControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeControllerFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -641,6 +643,7 @@
 			children = (
 				D8DD6B1D24FC6D85003DC1C7 /* SignUpControllerFactory.swift */,
 				D86468B72506AC0E00F5EEBD /* LoginControllerFactory.swift */,
+				D8FE6E892506D98700E9CFAC /* WelcomeControllerFactory.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1904,6 +1907,7 @@
 				D8DD6B1B24FC6C65003DC1C7 /* RemoteAddAccountFactory.swift in Sources */,
 				D8DD6B2F24FC8A81003DC1C7 /* MainQueueDispatchDecorator.swift in Sources */,
 				D8DD6B2A24FC7B2C003DC1C7 /* Environment.swift in Sources */,
+				D8FE6E8A2506D98800E9CFAC /* WelcomeControllerFactory.swift in Sources */,
 				D80B638A25027BD600B9EC1D /* ApiUrlFActory.swift in Sources */,
 				D8DD6ADF24FC5FC6003DC1C7 /* AppDelegate.swift in Sources */,
 				D86468B62506AAA900F5EEBD /* RemoteAuthenticationFactory.swift in Sources */,
