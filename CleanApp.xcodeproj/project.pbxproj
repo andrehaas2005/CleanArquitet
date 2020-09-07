@@ -130,6 +130,7 @@
 		D8FE6E862506C6AE00E9CFAC /* WelcomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FE6E852506C6AE00E9CFAC /* WelcomeRouterTests.swift */; };
 		D8FE6E882506CE8A00E9CFAC /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FE6E872506CE8A00E9CFAC /* WelcomeRouter.swift */; };
 		D8FE6E8A2506D98800E9CFAC /* WelcomeControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FE6E892506D98700E9CFAC /* WelcomeControllerFactory.swift */; };
+		D8FE6E8D2506DC7800E9CFAC /* ValidationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FE6E8C2506DC7800E9CFAC /* ValidationBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -460,6 +461,7 @@
 		D8FE6E852506C6AE00E9CFAC /* WelcomeRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouterTests.swift; sourceTree = "<group>"; };
 		D8FE6E872506CE8A00E9CFAC /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
 		D8FE6E892506D98700E9CFAC /* WelcomeControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeControllerFactory.swift; sourceTree = "<group>"; };
+		D8FE6E8C2506DC7800E9CFAC /* ValidationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1155,6 +1157,7 @@
 		D8DD6ADD24FC5FC6003DC1C7 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				D8FE6E8B2506DC3B00E9CFAC /* Builders */,
 				D8DD6B2D24FC8A66003DC1C7 /* Decorators */,
 				D8DD6B2624FC79DD003DC1C7 /* Env */,
 				D8DD6B2324FC7567003DC1C7 /* Proxies */,
@@ -1220,6 +1223,14 @@
 				D8DD6B2E24FC8A81003DC1C7 /* MainQueueDispatchDecorator.swift */,
 			);
 			name = Decorators;
+			sourceTree = "<group>";
+		};
+		D8FE6E8B2506DC3B00E9CFAC /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				D8FE6E8C2506DC7800E9CFAC /* ValidationBuilder.swift */,
+			);
+			path = Builders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1903,6 +1914,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8FE6E8D2506DC7800E9CFAC /* ValidationBuilder.swift in Sources */,
 				D80B638D25027CF400B9EC1D /* AlamofireAdapterFactory.swift in Sources */,
 				D8DD6B1B24FC6C65003DC1C7 /* RemoteAddAccountFactory.swift in Sources */,
 				D8DD6B2F24FC8A81003DC1C7 /* MainQueueDispatchDecorator.swift in Sources */,
