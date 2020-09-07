@@ -10,7 +10,7 @@
         <!--Welcome-->
         <scene sceneID="Uad-tp-KQf">
             <objects>
-                <viewController storyboardIdentifier="WelcomeViewController" id="crj-G8-16V" userLabel="Welcome" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeViewController" id="crj-G8-16V" userLabel="Welcome" customClass="WelcomeViewController" customModule="UI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lfK-nH-JA2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,6 +90,7 @@
                         <viewLayoutGuide key="safeArea" id="E2w-JR-3mZ"/>
                     </view>
                     <connections>
+                        <outlet property="SignUpButton" destination="vrt-ni-xX1" id="ZWJ-Ed-CAA"/>
                         <outlet property="loginButton" destination="8I3-pU-mlR" id="lUQ-wP-0Gu"/>
                     </connections>
                 </viewController>
