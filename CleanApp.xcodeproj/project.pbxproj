@@ -127,6 +127,7 @@
 		D8DD6B2A24FC7B2C003DC1C7 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD6B2924FC7B2C003DC1C7 /* Environment.swift */; };
 		D8DD6B2C24FC8321003DC1C7 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82960CF24DC432D0070F88E /* TestFactories.swift */; };
 		D8DD6B2F24FC8A81003DC1C7 /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD6B2E24FC8A81003DC1C7 /* MainQueueDispatchDecorator.swift */; };
+		D8FE6E862506C6AE00E9CFAC /* WelcomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FE6E852506C6AE00E9CFAC /* WelcomeRouterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -454,6 +455,7 @@
 		D8DD6B2824FC7A8F003DC1C7 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		D8DD6B2924FC7B2C003DC1C7 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		D8DD6B2E24FC8A81003DC1C7 /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
+		D8FE6E852506C6AE00E9CFAC /* WelcomeRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -793,6 +795,8 @@
 		D86468BD2506B79600F5EEBD /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
+				D86468BE2506B81200F5EEBD /* WelcomeViewControllerTests.swift */,
+				D8FE6E852506C6AE00E9CFAC /* WelcomeRouterTests.swift */,
 			);
 			name = Welcome;
 			path = ..;
@@ -1096,7 +1100,6 @@
 			isa = PBXGroup;
 			children = (
 				D86468BD2506B79600F5EEBD /* Welcome */,
-				D86468BE2506B81200F5EEBD /* WelcomeViewControllerTests.swift */,
 				D86468AD2502DAA300F5EEBD /* Login */,
 				D8DD6AAB24F95F89003DC1C7 /* SignUp */,
 			);
@@ -1762,6 +1765,7 @@
 				D86468BF2506B81200F5EEBD /* WelcomeViewControllerTests.swift in Sources */,
 				D8DD6AB024F96173003DC1C7 /* TestExtensions.swift in Sources */,
 				D86468B22506A45C00F5EEBD /* TestExtension.swift in Sources */,
+				D8FE6E862506C6AE00E9CFAC /* WelcomeRouterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
