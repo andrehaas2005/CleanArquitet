@@ -2737,7 +2737,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.nom.andre.haas.Main;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Main;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2756,7 +2756,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.nom.andre.haas.Main;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Main;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
