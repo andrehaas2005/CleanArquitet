@@ -19,7 +19,7 @@
 		D80B638825016F3A00B9EC1D /* EmailValidatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82960C724DC40300070F88E /* EmailValidatorSpy.swift */; };
 		D80B638A25027BD600B9EC1D /* ApiUrlFActory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80B638925027BD600B9EC1D /* ApiUrlFActory.swift */; };
 		D80B638D25027CF400B9EC1D /* AlamofireAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80B638C25027CF400B9EC1D /* AlamofireAdapterFactory.swift */; };
-		D82960BF24DC3BAB0070F88E /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82960BE24DC3BAB0070F88E /* SignUpViewModel.swift */; };
+		D82960BF24DC3BAB0070F88E /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82960BE24DC3BAB0070F88E /* SignUpRequest.swift */; };
 		D82960C524DC3FA60070F88E /* AlertViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82960C424DC3FA60070F88E /* AlertViewSpy.swift */; };
 		D82960CD24DC41290070F88E /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82960CC24DC41290070F88E /* AddAccountSpy.swift */; };
 		D82960D024DC432D0070F88E /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82960CF24DC432D0070F88E /* TestFactories.swift */; };
@@ -47,7 +47,7 @@
 		D864689D2502BA8000F5EEBD /* RemoteAuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D864689C2502BA8000F5EEBD /* RemoteAuthenticationTests.swift */; };
 		D864689F2502BC4400F5EEBD /* RemoteAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D864689E2502BC4400F5EEBD /* RemoteAuthentication.swift */; };
 		D86468A22502C94C00F5EEBD /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86468A12502C94C00F5EEBD /* LoginPresenterTests.swift */; };
-		D86468A52502CAEC00F5EEBD /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86468A42502CAEC00F5EEBD /* LoginViewModel.swift */; };
+		D86468A52502CAEC00F5EEBD /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86468A42502CAEC00F5EEBD /* LoginRequest.swift */; };
 		D86468A72502CBE900F5EEBD /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86468A62502CBE900F5EEBD /* LoginPresenter.swift */; };
 		D86468A92502CDD100F5EEBD /* AuthenticationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86468A82502CDD100F5EEBD /* AuthenticationSpy.swift */; };
 		D86468AC2502D97A00F5EEBD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86468AB2502D97A00F5EEBD /* Login.storyboard */; };
@@ -354,7 +354,7 @@
 		D80B638525003E9700B9EC1D /* ValidationCompositeSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationCompositeSpy.swift; sourceTree = "<group>"; };
 		D80B638925027BD600B9EC1D /* ApiUrlFActory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUrlFActory.swift; sourceTree = "<group>"; };
 		D80B638C25027CF400B9EC1D /* AlamofireAdapterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterFactory.swift; sourceTree = "<group>"; };
-		D82960BE24DC3BAB0070F88E /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		D82960BE24DC3BAB0070F88E /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
 		D82960C424DC3FA60070F88E /* AlertViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewSpy.swift; sourceTree = "<group>"; };
 		D82960C724DC40300070F88E /* EmailValidatorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorSpy.swift; sourceTree = "<group>"; };
 		D82960CC24DC41290070F88E /* AddAccountSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountSpy.swift; sourceTree = "<group>"; };
@@ -379,7 +379,7 @@
 		D864689C2502BA8000F5EEBD /* RemoteAuthenticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAuthenticationTests.swift; sourceTree = "<group>"; };
 		D864689E2502BC4400F5EEBD /* RemoteAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAuthentication.swift; sourceTree = "<group>"; };
 		D86468A12502C94C00F5EEBD /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
-		D86468A42502CAEC00F5EEBD /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		D86468A42502CAEC00F5EEBD /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		D86468A62502CBE900F5EEBD /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		D86468A82502CDD100F5EEBD /* AuthenticationSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationSpy.swift; sourceTree = "<group>"; };
 		D86468AB2502D97A00F5EEBD /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -646,7 +646,7 @@
 			children = (
 				D8C60BFA24D85EE000C4326E /* SignUpPresenter.swift */,
 				D86468A62502CBE900F5EEBD /* LoginPresenter.swift */,
-				D82960BE24DC3BAB0070F88E /* SignUpViewModel.swift */,
+				D82960BE24DC3BAB0070F88E /* SignUpRequest.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -759,7 +759,7 @@
 		D86468A32502CAC400F5EEBD /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				D86468A42502CAEC00F5EEBD /* LoginViewModel.swift */,
+				D86468A42502CAEC00F5EEBD /* LoginRequest.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -1830,8 +1830,8 @@
 				D8C60BFB24D85EE000C4326E /* SignUpPresenter.swift in Sources */,
 				D8C60C0B24DB1E5E00C4326E /* LoadingView.swift in Sources */,
 				D86468A72502CBE900F5EEBD /* LoginPresenter.swift in Sources */,
-				D86468A52502CAEC00F5EEBD /* LoginViewModel.swift in Sources */,
-				D82960BF24DC3BAB0070F88E /* SignUpViewModel.swift in Sources */,
+				D86468A52502CAEC00F5EEBD /* LoginRequest.swift in Sources */,
+				D82960BF24DC3BAB0070F88E /* SignUpRequest.swift in Sources */,
 				D8C60C0024D8604B00C4326E /* AlertView.swift in Sources */,
 				D8630DB224FE8E7F008A949E /* Validation.swift in Sources */,
 			);
