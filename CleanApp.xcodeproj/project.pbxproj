@@ -128,6 +128,7 @@
 		D8DD6B2C24FC8321003DC1C7 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82960CF24DC432D0070F88E /* TestFactories.swift */; };
 		D8DD6B2F24FC8A81003DC1C7 /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD6B2E24FC8A81003DC1C7 /* MainQueueDispatchDecorator.swift */; };
 		D8FE6E862506C6AE00E9CFAC /* WelcomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FE6E852506C6AE00E9CFAC /* WelcomeRouterTests.swift */; };
+		D8FE6E882506CE8A00E9CFAC /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FE6E872506CE8A00E9CFAC /* WelcomeRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -456,6 +457,7 @@
 		D8DD6B2924FC7B2C003DC1C7 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		D8DD6B2E24FC8A81003DC1C7 /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
 		D8FE6E852506C6AE00E9CFAC /* WelcomeRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouterTests.swift; sourceTree = "<group>"; };
+		D8FE6E872506CE8A00E9CFAC /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -788,6 +790,7 @@
 			children = (
 				D86468BB2506B34E00F5EEBD /* Welcome.storyboard */,
 				D86468C02506BA5A00F5EEBD /* WelcomeViewController.swift */,
+				D8FE6E872506CE8A00E9CFAC /* WelcomeRouter.swift */,
 			);
 			name = Welcome;
 			sourceTree = "<group>";
@@ -1745,6 +1748,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8FE6E882506CE8A00E9CFAC /* WelcomeRouter.swift in Sources */,
 				D86468B12502DB1F00F5EEBD /* LoginViewController.swift in Sources */,
 				D86468C12506BA5A00F5EEBD /* WelcomeViewController.swift in Sources */,
 				D8B07E9024F424EC00228FFE /* SignUpViewController.swift in Sources */,
