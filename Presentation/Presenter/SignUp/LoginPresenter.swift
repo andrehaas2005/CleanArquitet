@@ -36,7 +36,7 @@ public class LoginPresenter {
                 switch result {
                 case .success(_):
                     self.alertView.showMessage(viewModel: AlertViewModel(title: "Sucesso",
-                                                                         message: "Conta criada com sucesso."))
+                                                                         message: "Acesso autorizado."))
                 case .failure(let error):
                     var message: String!
                     switch error {
