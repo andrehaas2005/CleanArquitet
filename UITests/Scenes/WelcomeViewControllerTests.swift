@@ -18,6 +18,12 @@ class WelcomeViewControllerTests: XCTestCase {
         sut.loginButton?.simulateTap()
         XCTAssertEqual(buttonSpy.clicks, 1)
     }
+
+    func test_signUpButton_calls_signUp_on_tap() {
+        let (sut, buttonSpy) = makeSuv()
+        sut.SignUpButton?.simulateTap()
+        XCTAssertEqual(buttonSpy.clicks, 1)
+    }
 }
 
 extension WelcomeViewControllerTests {
@@ -25,6 +31,7 @@ extension WelcomeViewControllerTests {
         let buttonSpy = ButtonSpy()
         let sut = WelcomeViewController.instantiate()
         sut.login = buttonSpy.onClick
+        sut.signUp = buttonSpy.onClick
         sut.loadViewIfNeeded()
         //        checkMemoryLeak(for: sut, file: file, line: line)
         return (sut, buttonSpy)

@@ -31,15 +31,11 @@ public final class WelcomeViewController: UIViewController, Storyboarded {
         SignUpButton?.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
     }
 
-    public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
-    }
-
     @objc private func loginButtonTapped() {
         login?()
     }
 
     @objc private func signUpButtonTapped() {
-//        signUp?()
+        signUp?()
     }
 }
