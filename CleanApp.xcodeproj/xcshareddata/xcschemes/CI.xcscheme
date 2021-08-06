@@ -98,7 +98,59 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       enableThreadSanitizer = "YES"
-      codeCoverageEnabled = "YES">
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D87DCD4124CCC5BC00A8CCD1"
+            BuildableName = "Data.framework"
+            BlueprintName = "Data"
+            ReferencedContainer = "container:CleanApp.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D87DCD3024CCBFA500A8CCD1"
+            BuildableName = "Domain.framework"
+            BlueprintName = "Domain"
+            ReferencedContainer = "container:CleanApp.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D8768B9924CE45B2009BAB47"
+            BuildableName = "Infra.framework"
+            BlueprintName = "Infra"
+            ReferencedContainer = "container:CleanApp.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D8C60BE224D82F7D00C4326E"
+            BuildableName = "Presentation.framework"
+            BlueprintName = "Presentation"
+            ReferencedContainer = "container:CleanApp.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D82960D524DC470D0070F88E"
+            BuildableName = "UI.framework"
+            BlueprintName = "UI"
+            ReferencedContainer = "container:CleanApp.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D8DD6AB924F99814003DC1C7"
+            BuildableName = "Validation.framework"
+            BlueprintName = "Validation"
+            ReferencedContainer = "container:CleanApp.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D8DD6ADB24FC5FC6003DC1C7"
+            BuildableName = "Main.app"
+            BlueprintName = "Main"
+            ReferencedContainer = "container:CleanApp.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
          <TestableReference
             skipped = "NO"

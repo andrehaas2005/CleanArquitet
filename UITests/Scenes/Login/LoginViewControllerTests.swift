@@ -31,6 +31,7 @@ class LoginViewControllerTests: XCTestCase {
         let sut = makeSuv(loginSpy: { loginViewModel = $0 })
         let email = sut.emailTextField?.text
         let password = sut.passwordTextField?.text
+        
         sut.loginButton?.simulateTap()
         XCTAssertEqual(loginViewModel, LoginRequest(email: email, password: password))
     }

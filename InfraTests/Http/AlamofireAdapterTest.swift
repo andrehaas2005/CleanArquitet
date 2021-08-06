@@ -78,7 +78,7 @@ extension AlamofireAdapterTest {
         sut.post(to: url, with: data) {_ in exp.fulfill()}
         var request: URLRequest?
         UrlProtocolStub.observeRequest { request = $0 }
-        wait(for: [exp], timeout: 1)
+        wait(for: [exp], timeout: 20)
         action(request!)
     }
 
@@ -98,6 +98,6 @@ extension AlamofireAdapterTest {
             }
             exp.fulfill()
         })
-        wait(for: [exp], timeout: 1)
+        wait(for: [exp], timeout: 10)
     }
 }
